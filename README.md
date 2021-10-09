@@ -5,6 +5,11 @@ A flash card system with built-in spaced repetition function to help you retain 
 
 # About The Project
 
+## Technologies
+1. MongoDB
+2. Express
+3. React
+4. NodeJS
 
 ## Project Team
 
