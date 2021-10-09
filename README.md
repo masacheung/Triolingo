@@ -1,5 +1,8 @@
 # Triolingo
 
+## Table of Contents
+
+
 Your Best Education App!!
 A flash card system with built-in spaced repetition function to help you retain your knowledge.
 
