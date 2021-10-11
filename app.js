@@ -33,6 +33,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api/users", users);
+app.use("/api/cards", users);
 
 app.use(passport.initialize());
 require('./config/passport')(passport);

@@ -5,10 +5,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
-
 const validateSignupInput = require('../../validation/signup');
 const validateLoginInput = require('../../validation/login');
-
 router.get('/test', (req, res) => {
     res.json({msg: "This is users' test route"})
 })
@@ -73,7 +71,7 @@ router.post('/login', (req, res) => {
               id: user.id,
               usernmae: user.username
             }
-            
+
             jwt.sign(
               payload,
               keys.secretOrKey,
