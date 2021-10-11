@@ -6,6 +6,7 @@ import { Route } from 'react-router';
 import LoginFormContainer from './session/login_form.container';
 import SignupFormContainer from './session/signup_form_container';
 import SplashPages from './splash_page';
+import TeamPage from './main/team_page';
 
 import "../styles/reset.css";
 import "../styles/splash.css";
@@ -16,6 +17,7 @@ const App = () => (
     <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route exact path="/team" component={TeamPage}/>
         <Route exact path="/" component={SplashPages}/>
     </Switch>
 );

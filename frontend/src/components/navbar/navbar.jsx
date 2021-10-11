@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavbarSessionContainer from './navbar_session_container';
 
 const Navbar = () => {
     return (
