@@ -7,10 +7,6 @@ const User = require('../../models/User');
 const validateCardInput = require('../../validation/cards');
 
 
-router.get('/test', (req, res) => {
-    res.json({msg: "This is the cards test route"})
-})
-
 // route for all the cards
 router.get('/', (req, res) => {
     Card.find()
