@@ -16,7 +16,7 @@ module.exports = function validateSignupInput(data) {
         errors.username = "Username field is required";
     }
 
-    if(Validator.isempty(data.password)) {
+    if(Validator.isEmpty(data.password)) {
         errors.password = "Password field is required";
     }
 
@@ -24,13 +24,13 @@ module.exports = function validateSignupInput(data) {
         errors.password = "Password must be at least 6 characters";
     }
 
-    if(Validator.isempty(data.password2)) {
-        errors.password2 = "Password field is required";
-    }
+    // if(Validator.isEmpty(data.password2)) {
+    //     errors.password2 = "Password field is required";
+    // }
 
-    if(!Validator.equals(data.password, data.password2)){
-        errors.password2 = "Passwords must match";
-    }
+    // if(!Validator.equals(data.password, data.password2)){
+    //     errors.password2 = "Passwords must match";
+    // }
 
     return {
         errors,

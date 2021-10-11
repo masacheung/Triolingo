@@ -6,6 +6,9 @@ const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
 
+const validateSignupInput = require('../../validation/signup');
+const validateLoginInput = require('../../validation/login');
+
 router.get('/test', (req, res) => {
     res.json({msg: "This is users' test route"})
 })
@@ -15,6 +18,12 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
 })
 
 router.post('/signup', (req, res) => {
+  const {errors, isValid } = validateSignupInput(req.body);
+
+  if(!isValid) {
+    return res.status(400).json(errors);
+  }
+
     User.findOne({ username: req.body.username })
     .then(user => {
         if(user) {
@@ -40,6 +49,13 @@ router.post('/signup', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
+  const { errors, isValid } = validateLoginInput(req.body);
+
+  if(!isValid) {
+    return res.status(400).json(errors);
+  }
+
+
   const username = req.body.username;
   const password = req.body.password;
 
@@ -52,7 +68,22 @@ router.post('/login', (req, res) => {
       bcrypt.compare(password, user.password)
         .then(isMatch => {
           if (isMatch) {
-            res.json({msg: 'Success'});
+            // res.json({msg: 'Success'});
+            const payload = {
+              id: user.id,
+              usernmae: user.username
+            }
+            
+            jwt.sign(
+              payload,
+              keys.secretOrKey,
+              { expiresIn: 3600 },
+              (err, token) => {
+                  res.json({
+                      success: true,
+                      token: "Bearer " + token
+                  });
+              });
           } else {
             return res.status(400).json({password: 'Incorrect password'});
           }
