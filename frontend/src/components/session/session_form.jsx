@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
 
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            errors: {}
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,8 +27,8 @@ class SessionForm extends React.Component {
     renderErrors() {
         return(
             <div>
-                {this.props.errors.map((err, i) => (
-                    <p key={`error- ${i}`}>{err}</p>
+                {Object.keys(this.state.errors).map((err, i) => (
+                    <p key={`error- ${i}`}>{this.state.errors[err]}</p>
                 ))}
             </div>
         )
