@@ -4,6 +4,8 @@
   "description": "Flash Card",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
