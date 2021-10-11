@@ -2,15 +2,32 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
+const users = require('./routes/api/users');
+const User = require('./models/User');
+const passport = require('passport');
 
 mongoose
     .connect(db, { useNewUrlParser: true})
     .then(() => console.log("Connected to mongoDB"))
     .catch(err => console.log(err))
 
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: false
+}));
+
 app.get("/", (req, res) => {
+    const user = new User({
+        username: "demouser",
+        password: "demo123"
+    })
     res.send("Hello World")
 })
+
+app.use("/api/users", users);
+
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 const port = process.env.PORT || 5000;
 
