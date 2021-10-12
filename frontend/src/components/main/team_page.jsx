@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, ffaAngllist } from '@fortawesome/free-brands-svg-icons';
 
 const TeamPage = () => {
     return (
@@ -12,10 +14,10 @@ const TeamPage = () => {
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/" target="_blank" rel="noreferrer">
-
+                            <FontAwesomeIcon icon={faLinkedin}/>
                         </a>
                         <a href="https://github.com/masacheung" target="_blank" rel="noreferrer">
-
+                            <FontAwesomeIcon icon={faGithub}/>
                         </a>
                     </div>
                 </div>
@@ -26,9 +28,11 @@ const TeamPage = () => {
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/jwp007/" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin}/>
 
                         </a>
                         <a href="https://github.com/dannyjwpark" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faGithub}/>
 
                         </a>
                     </div>
@@ -40,10 +44,10 @@ const TeamPage = () => {
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">
-
+                            <FontAwesomeIcon icon={faLinkedin}/>
                         </a>
                         <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">
-
+                            <FontAwesomeIcon icon={faGithub}/>
                         </a>
                     </div>
                 </div>
