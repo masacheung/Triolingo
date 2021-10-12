@@ -6,6 +6,8 @@
     position: relative;
     margin: 0 auto;
     border-bottom: 2px solid #000000;
+    background-color: #444343;
+    color: white;
 }
 
 .logo-navbar {
@@ -14,7 +16,7 @@
     font-size: 35px;
     font-weight: 700;
     text-decoration: none;
-    color: black;
+    color: white;
     letter-spacing: -1px;
 }
 
@@ -23,7 +25,11 @@
     letter-spacing: 1px;  
 }
 
-.logo-nav {
+.logo-img {
+    width:50px;
+}
+
+.logo-nav{
     width: 50px;
     height: 50px;
     margin: 10px;
@@ -65,12 +71,13 @@
     text-decoration: none;
     font-family: "Soleil_Bold", Helvetica, Arial, Sans-serif;
     font-size: 20px;
-    color: black;
+    color: white;
 }
 
 .session-nav {
     display: inline-block;
     margin-left: auto;
+    color: white;
 }
 
 
@@ -81,10 +88,14 @@
     text-decoration: none;
     font-family: "Soleil_Bold", Helvetica, Arial, Sans-serif;
     font-size: 20px;
-    color: black;
+    color: white;
 }
 
 
 .session-nav > a:hover{
-    color: #00a82d;
+    color: #769de4;
+}
+
+.navbar-right {
+    display: flex;
 }
