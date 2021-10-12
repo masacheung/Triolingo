@@ -3,10 +3,44 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle, faInbox} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Modal from 'react-modal';
 
 class Nav extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            title: "",
+            definition: "",
+            user: this.props.currentUser._id,
+            modal: false
+        }
+
+        this.handleCloseModal = this.handleCloseModal.bind(this);
+        this.handleOpenModal = this.handleOpenModal.bind(this);
+        this.handleCreateCard = this.handleCreateCard.bind(this);
+    }
+
+    update(field){
+        return e => {this.setState({[field]: e.currentTarget.value})}
+    }
+
+    handleOpenModal() {
+        this.setState({modal: true})
+    }
+
+    handleCloseModal() {
+        this.setState({modal: false})
+    }
+
+    handleCreateCard() {
+        let card = {
+            title: this.state.title,
+            definition: this.state.definition,
+            user: this.state.user
+        }
+
+        this.props.addCard(card);
+        this.handleCloseModal();
     }
 
     render() {
@@ -26,7 +60,7 @@ class Nav extends React.Component {
                         {name}
                     </div>
                 </div>
-                <button className="new-card">
+                <button className="new-card" onClick={this.handleOpenModal}>
                     <FontAwesomeIcon icon={faPlus}/><div className="new-card-name">Add Card</div>
                 </button>
                 <ul className="main-nav-list">
@@ -45,6 +79,20 @@ class Nav extends React.Component {
                 <div className="social">
                     <a href="https://github.com/masacheung/Triolingo"><FontAwesomeIcon icon={faGithub} className="social-img"/></a>
                 </div>
+                <Modal isOpen={this.state.modal} className="overlay">
+                    <div className="my-create-modal">
+                        <h2 className="create-modal-title">Create new flash card</h2>
+                        <label className="create-modal-label">Title</label>
+                        <input className="create-modal-input" type="text" placeholder="Flash Card Title" value={this.state.title} onChange={this.update('title')}/>
+                        
+                        <label className="create-modal-label">Definition</label>
+                        <input className="create-modal-input" type="text" placeholder="Flash Card Definition" value={this.state.definition} onChange={this.update('definition')}/>
+
+
+                        <button onClick={this.handleCloseModal}>Cancel</button>
+                        <button onClick={this.handleCreateCard}>Create</button>
+                    </div>
+                </Modal>
             </div>
         )
     }
