@@ -1,4 +1,5 @@
 import React from "react";
+import CardsIndexList from "./cards_index_list";
 
 class CardsIndex extends React.Component{
     constructor(props) {
@@ -10,6 +11,10 @@ class CardsIndex extends React.Component{
     }
 
     render() {
+        let cards = [];
+        if (this.props.cards.data) {
+            cards = Object.values(this.props.cards.data)
+        }
         return (
             <div className="cards-index">
                 <div className="cards-index-header">
@@ -17,7 +22,7 @@ class CardsIndex extends React.Component{
                 </div>
 
                 <div className="all-cards">
-                    {this.state.cards.map( card=> (
+                    {cards.map( card=> (
                         <CardsIndexList card={card} key={card._id}/>
                     ))}
                 </div>

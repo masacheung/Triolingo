@@ -1,9 +1,11 @@
 import { connect } from "react-redux";
 import CardsIndex from "./cards_index";
 
+import { fetchCards, fetchCard, addCard, deleteCard } from "../../actions/card_actions";
+
 const mSTP = state => ({
     currentUser: state.session.user.username,
-    cards: Object.values(state.cards)
+    cards: state.cards
 })
 
 const mDTP = dispatch => ({

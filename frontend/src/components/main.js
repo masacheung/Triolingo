@@ -4,12 +4,14 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch } from "react-router-dom";
 
 import MainPage from "./main/main_page";
+import CardsIndexContainer from "./cards/cards_index_container";
 
 const Main = () => {
     return( 
         <div>
             <Switch>
                 <ProtectedRoute path='/cards' component={MainPage}/>
+                <ProtectedRoute path='/cardss' component={CardsIndexContainer} />
             </Switch>
         </div>
     )
