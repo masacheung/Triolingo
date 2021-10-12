@@ -11,7 +11,7 @@ const Main = () => {
         <div className="main">
             <ProtectedRoute component={MainNav}/>
             <Switch>
-                <ProtectedRoute path='/cards' component={MainPage}/>
+                <ProtectedRoute path='/main' component={MainPage}/>
                 <ProtectedRoute path='/cardss' component={CardsIndexContainer} />
             </Switch>
         </div>

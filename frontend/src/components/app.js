@@ -27,9 +27,7 @@ const App = () => (
         <Route path="/" component={NavbarContainer}/>
 
         <Switch>
-            <ProtectedRoute path="/mainnav" component={MainNav}/>
-            <ProtectedRoute path="/cards" component={Main}/>
-            <ProtectedRoute path="/cardss" component={Main} />
+            <ProtectedRoute path="/main" component={Main}/>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
