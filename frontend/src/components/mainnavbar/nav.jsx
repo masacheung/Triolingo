@@ -69,7 +69,7 @@ class Nav extends React.Component {
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
-                        <FontAwesomeIcon icon={faLayerGroup}/> All Cards
+                        <Link to="/cards"><FontAwesomeIcon icon={faLayerGroup}/> All Cards</Link>
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
