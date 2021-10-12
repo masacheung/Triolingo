@@ -8,7 +8,7 @@ import LoginFormContainer from './session/login_form.container';
 import SignupFormContainer from './session/signup_form_container';
 import SplashPage from './splash/splash_page';
 import TeamPage from './main/team_page';
-import MainPage from './main/main_page';
+import Main from './main';
 import MainNav from './mainnavbar/nav_container';
 
 import "../styles/reset.css";
@@ -27,7 +27,7 @@ const App = () => (
 
         <Switch>
             <ProtectedRoute path="/mainnav" component={MainNav}/>
-            <ProtectedRoute path="/cards" component={MainPage}/>
+            <ProtectedRoute path="/cards" component={Main}/>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
@@ -39,3 +39,4 @@ const App = () => (
 );
 
 export default App;
+;
