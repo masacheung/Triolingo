@@ -47,7 +47,7 @@
     color:rgba(177,191,206,0.5);
 }
 
-.members-container > .member-card > .social-links > svg {
+.members-container > .member-card > .social-links {
     transition: .2s color ease-in-out;
 }
 

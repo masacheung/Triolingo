@@ -13,8 +13,8 @@ const TeamPage = () => {
 
                 <div className="member-card">
                     <h2>Man Tat Masa Cheung</h2>
-                    <div class="image-cropper">
-                        <img src={Masa} alt="" class="profile-pic"/>
+                    <div className="image-cropper">
+                        <img src={Masa} alt="" className="profile-pic"/>
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/" target="_blank" rel="noreferrer">
@@ -28,8 +28,8 @@ const TeamPage = () => {
 
                 <div className="member-card">
                     <h2>Danny Park</h2>
-                    <div class="image-cropper">
-                        <img src={Danny} alt="" class="profile-pic"/>
+                    <div className="image-cropper">
+                        <img src={Danny} alt="" className="profile-pic"/>
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/jwp007/" target="_blank" rel="noreferrer">
@@ -45,8 +45,8 @@ const TeamPage = () => {
 
                 <div className="member-card">
                     <h2>Arwen Kim</h2>
-                    <div class="image-cropper">
-                        <img src={Arwen} alt="" class="profile-pic"/>
+                    <div className="image-cropper">
+                        <img src={Arwen} alt="" className="profile-pic"/>
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">
