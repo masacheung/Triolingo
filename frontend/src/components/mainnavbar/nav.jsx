@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle, faInbox} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 class Nav extends React.Component {
@@ -36,6 +36,10 @@ class Nav extends React.Component {
                     <br className="main-nav-gap"/>
                     <li>
                         <FontAwesomeIcon icon={faLayerGroup}/> All Cards
+                    </li>
+                    <br className="main-nav-gap"/>
+                    <li>
+                        <FontAwesomeIcon icon={faInbox}/> All Categories
                     </li>
                 </ul>
                 <div className="social">
