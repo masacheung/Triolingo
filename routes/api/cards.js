@@ -48,8 +48,7 @@ router.post('/',
         audio: req.body.audio,
         notes: req.body.notes,
         // user: req.user.id,
-        category: req.body.category,
-        character: req.body.title[0]
+        category: req.body.category
       });
   
       newCard.save().then(card => res.json(card));

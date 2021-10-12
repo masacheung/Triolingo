@@ -8,6 +8,9 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
+import * as card_actions from './actions/card_actions';
+import * as SessionAPIUtil from './util/session_api_util';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (localStorage.jwtToken) {
@@ -28,7 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const root = document.getElementById('root');
 
+  window.dispatch = store.dispatch;
   window.getState = store.getState;
+  
+  window.addCard = card_actions.addCard;
+  window.fetchCard = card_actions.fetchCard;
+  window.fetchCards = card_actions.fetchCards;
+  window.updateCard = card_actions.updateCard;
+
+  window.signup = SessionAPIUtil.signup;
 
   ReactDOM.render(<Root store={store} />, root);
 });

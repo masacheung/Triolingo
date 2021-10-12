@@ -27,13 +27,9 @@ module.exports = function validateCardInput(data) {
         errors.definition = 'Definition field is required'
     }
 
-    if (Validator.isEmpty(data.category)) {
-        errors.category = 'Category field is required'
-    }
-
-    if(!Validator.isLength(data.character, {min: 1, max: 1})) {
-        errors.character = "Character must be 1 letter";
-    }
+    // if (Validator.isEmpty(data.category)) {
+    //     errors.category = 'Category field is required'
+    // }
 
 
     return {
