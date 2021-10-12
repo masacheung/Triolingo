@@ -6,6 +6,7 @@ module.exports = function validateCardInput(data) {
 
     data.title = validText(data.title) ? data.title : '';
     data.definition = validText(data.definition) ? data.definition : '';
+    data.category = validText(data.category) ? data.category : '';
     // data.synonyms = validText(data.synonyms) ? data.synonyms : '';
     // data.audio = validText(data.audio) ? data.audio : '';
     // data.notes = validText(data.notes) ? data.notes : '';
@@ -18,13 +19,18 @@ module.exports = function validateCardInput(data) {
         errors.title = 'Title field is required'
     }
 
+    if (!Validator.isAlphanumeric(data.title)) {
+        errors.title = 'Title cannot contain a special character (i.e. !?=~...)'
+    }
+    
     if (Validator.isEmpty(data.definition)) {
         errors.definition = 'Definition field is required'
     }
 
-    if (!Validator.isAlphanumeric(data.definition)) {
-        errors.definition = 'Definition cannot contain a special character (i.e. !?=~...)'
+    if (Validator.isEmpty(data.category)) {
+        errors.category = 'Category field is required'
     }
+
 
     return {
         errors,

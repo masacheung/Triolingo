@@ -3,7 +3,9 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require('./routes/api/users');
+const cards = require('./routes/api/cards');
 const User = require('./models/User');
+const Card = require('./models/Card');
 const passport = require('passport');
 
 const path= require('path');
@@ -32,8 +34,9 @@ app.get("/", (req, res) => {
     res.send("Hello World")
 })
 
+
 app.use("/api/users", users);
-app.use("/api/cards", users);
+app.use("/api/cards", cards);
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
