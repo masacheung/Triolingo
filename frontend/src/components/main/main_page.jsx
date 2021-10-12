@@ -5,7 +5,7 @@ const MainPage = () => {
     return(
         <div className="main-page">
             <div className="cards-index">
-                <div className="card"> <Link to="/cards/details">A</Link></div>
+                <div className="card"><Link to="/cards/details">A</Link></div>
                 <div className="card">B</div>
                 <div className="card">C</div>
                 <div className="card">D</div>
