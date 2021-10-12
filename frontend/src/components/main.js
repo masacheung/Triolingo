@@ -5,6 +5,7 @@ import { Switch } from "react-router-dom";
 
 import MainPage from "./main/main_page";
 import CardsIndexContainer from "./cards/cards_index_container";
+import MainNav from "./mainnavbar/nav_container";
 
 const Main = () => {
     return( 
