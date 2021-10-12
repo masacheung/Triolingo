@@ -32,7 +32,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
             <Route exact path="/team" component={TeamPage}/>
-            <Route exact path="/" component={SplashPage}/>
+            <AuthRoute exact path="/" component={SplashPage}/>
         </Switch>
 
     </div>
