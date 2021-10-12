@@ -16,9 +16,9 @@ class CardsIndex extends React.Component{
             cards = Object.values(this.props.cards.data)
         }
         return (
-            <div className="cards-index">
+            <div className="cards-index-container">
                 <div className="cards-index-header">
-                    <h2>All Cards</h2>
+                    <h1 className="cards-header">All Cards</h1>
                 </div>
 
                 <div className="all-cards">
