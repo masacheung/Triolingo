@@ -8,7 +8,8 @@ import CardsIndexContainer from "./cards/cards_index_container";
 
 const Main = () => {
     return( 
-        <div>
+        <div className="main">
+            <ProtectedRoute component={MainNav}/>
             <Switch>
                 <ProtectedRoute path='/cards' component={MainPage}/>
                 <ProtectedRoute path='/cardss' component={CardsIndexContainer} />

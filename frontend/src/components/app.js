@@ -19,6 +19,7 @@ import "../styles/session.css";
 import "../styles/mainpage.css"
 import "../styles/character_filterbox.css";
 import "../styles/mainnav.css";
+import "../styles/main.css";
 
 
 const App = () => (
