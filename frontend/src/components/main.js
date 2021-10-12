@@ -4,12 +4,15 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch } from "react-router-dom";
 
 import MainPage from "./main/main_page";
+import MainNav from './mainnavbar/nav_container';
+
 
 const Main = () => {
     return( 
-        <div>
+        <div className="main">
+            <ProtectedRoute component={MainNav}/>
             <Switch>
-                <ProtectedRoute path='/cards' component={MainPage}/>
+                <ProtectedRoute path='/main' component={MainPage}/>
             </Switch>
         </div>
     )

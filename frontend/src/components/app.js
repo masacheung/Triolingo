@@ -19,6 +19,7 @@ import "../styles/session.css";
 import "../styles/mainpage.css"
 import "../styles/character_filterbox.css";
 import "../styles/mainnav.css";
+import "../styles/main.css";
 
 
 const App = () => (
@@ -26,8 +27,7 @@ const App = () => (
         <Route path="/" component={NavbarContainer}/>
 
         <Switch>
-            <ProtectedRoute path="/mainnav" component={MainNav}/>
-            <ProtectedRoute path="/cards" component={Main}/>
+            <ProtectedRoute path="/main" component={Main}/>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 

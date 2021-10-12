@@ -25,7 +25,7 @@ class Nav extends React.Component {
                 </button>
                 <ul className="main-nav-list">
                     <li>
-                        <FontAwesomeIcon icon={faQuestionCircle}/> FAQ
+                        <Link to="/main"><FontAwesomeIcon icon={faQuestionCircle}/> FAQ</Link>
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
