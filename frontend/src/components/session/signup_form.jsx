@@ -2,13 +2,14 @@ import React from "react";
 import logo from "../../styles/img/logo.png";
 import { Link } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             username: '',
             password: '',
+            password2: '',
             errors: {}
         };
 
@@ -26,6 +27,15 @@ class SessionForm extends React.Component {
         this.props.processForm(user);
     }
 
+    handleDemoLogin(e) {
+        const demo = {
+            username: "demo",
+            password: "password"
+        }
+
+        this.props.login(demo);
+    }
+
     renderErrors() {
         return(
             <div>
@@ -38,15 +48,6 @@ class SessionForm extends React.Component {
 
     componentWillUnmount() {
         this.props.removeErrors();
-    }
-
-    handleDemoLogin(e) {
-        const demo = {
-            username: "demo",
-            password: "password"
-        }
-
-        this.props.login(demo);
     }
 
     render() {
@@ -75,13 +76,18 @@ class SessionForm extends React.Component {
                                     </label>
                                 </li>
                                 <li>
+                                    <label className="password2">
+                                        <input type="password" value={this.state.password2} onChange={this.update('password2')} placeholder="Enter password again" className="password-field"/>
+                                    </label>
+                                </li>
+                                <li>
                                     <button className="session-form-continue">{this.props.formType}</button>
                                 </li>
                             </ul>
                         </form>
                         <div className="context-switch">
-                                <div>Don't have an account?</div>
-                                <Link to="/signup" className="switch">Create account</Link>
+                                <div>Already have an account?</div>
+                                <Link to="/login" className="switch">Sign In</Link>
                                 <div className="switch"><a onClick={() => this.handleDemoLogin()}>Log in with Demo user</a></div>
                         </div>
                     </div>
@@ -92,4 +98,4 @@ class SessionForm extends React.Component {
 };
 
 
-export default SessionForm;
+export default SignupForm;

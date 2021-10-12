@@ -2,7 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../styles/img/logo.png"
 
-const Navbar = () => {
+const Navbar = ({loggedIn, logout}) => {
+    const loginButton = () => {
+        return <Link to="/login">Log In</Link>
+    }
+
+    const logoutButton = () => {
+        return <button onClick={logout}>Logout</button>
+        
+    }
+
     return (
         <header>
             <div className="navbar">
@@ -18,7 +27,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <nav className="session-nav">
-                    <Link to="/login">Log In</Link>
+                    {loggedIn ? logoutButton()  : loginButton()}
                 </nav>
             </div>
         </header>

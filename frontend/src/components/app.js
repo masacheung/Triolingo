@@ -19,13 +19,17 @@ import "../styles/session.css";
 
 const App = () => (
     <div>
-        <AuthRoute path="/" component={NavbarContainer}/>
+        <Route path="/" component={NavbarContainer}/>
+
         <Switch>
+            <ProtectedRoute path="/cards" component={MainPage}/>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
+
             <Route exact path="/team" component={TeamPage}/>
             <Route exact path="/" component={SplashPage}/>
         </Switch>
+
     </div>
 );
 

@@ -16,7 +16,7 @@ const SplashPage = () => {
                     <button className="main-cta"> Sign up here! </button>
                 </Link>
                 <br/>
-                <div class="slogan-log-in-link">
+                <div className="slogan-log-in-link">
                 <Link to="/login">
                     <button>Already have an account? Log in</button>
                 </Link>
