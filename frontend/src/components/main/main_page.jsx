@@ -1,11 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import CharacterFilterbox from './character_filterbox';
+import InstructionPage from './instruction_page';
 
 const MainPage = () => {
     return(
         <div className="main-page">
 
+            <InstructionPage/>
             <CharacterFilterbox />
 
             {/* <div className="cards-index">
