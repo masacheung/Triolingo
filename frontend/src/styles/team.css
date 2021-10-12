@@ -79,8 +79,13 @@
     margin: 0.7em 0.5em;
 }
 
-.fontAwesome {
+.social-links > a > .fontAwesome {
     font-size: 2.5rem;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+
+.social-links > a > .fontAwesome:hover {
+    color: #4C82E6;
 }
