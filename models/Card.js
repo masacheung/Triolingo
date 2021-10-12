@@ -16,7 +16,9 @@ const CardSchema = new Schema(
             type: String,
             required: true
         },
-        synonyms: [String],
+        synonyms: [{
+          type: String
+        }],
         audio: {
             type: String,
         },
@@ -27,7 +29,6 @@ const CardSchema = new Schema(
             type: String,
             default: "English"
         }
- 
     }
 )
 
