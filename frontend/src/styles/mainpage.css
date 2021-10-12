@@ -1,0 +1,15 @@
+.cards-index{
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+.cards-index > .card {
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px rgba(177,191,206,0.5);
+    justify-content: space-between;
+    height: 330px;
+    min-width: 280px;
+    flex-wrap: wrap;
+}
