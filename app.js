@@ -27,10 +27,10 @@ app.use(express.urlencoded({
 }));
 
 app.get("/", (req, res) => {
-    const user = new User({
-        username: "demouser",
-        password: "demo123"
-    })
+    // const user = new User({
+    //     username: "demouser",
+    //     password: "demo123"
+    // })
     res.send("Hello World")
 })
 

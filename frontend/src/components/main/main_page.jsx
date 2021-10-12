@@ -1,10 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import CharacterFilterbox from './character_filterbox';
 
 const MainPage = () => {
     return(
         <div className="main-page">
-            <div className="cards-index">
+
+            <CharacterFilterbox />
+
+            {/* <div className="cards-index">
                 <div className="card"> <Link to="/cards/details">A</Link></div>
                 <div className="card">B</div>
                 <div className="card">C</div>
@@ -28,7 +32,7 @@ const MainPage = () => {
                 <div className="card">X</div>
                 <div className="card">Y</div>
                 <div className="card">Z</div>
-            </div>
+            </div> */}
         </div>
     )
 };
