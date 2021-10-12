@@ -26,10 +26,8 @@ const CardSchema = new Schema(
         category: {
             type: String,
             default: "English"
-        },
-        character: {
-            type: String
         }
+ 
     }
 )
 
