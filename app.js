@@ -26,21 +26,13 @@ app.use(express.urlencoded({
     extended: false
 }));
 
-app.get("/", (req, res) => {
-    // const user = new User({
-    //     username: "demouser",
-    //     password: "demo123"
-    // })
-    res.send("Hello World")
-})
-
-
-app.use("/api/users", users);
-app.use("/api/cards", cards);
-
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
 const port = process.env.PORT || 5000;
+
+app.use("/api/users", users);
+app.use("/api/cards", cards);
+
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)})
