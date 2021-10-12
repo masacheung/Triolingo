@@ -9,7 +9,8 @@ const CardSchema = new Schema(
         },
         title: {
             type: String,
-            required: true
+            required: true,
+            unique: true
         },
         definition: {
             type: String,
@@ -25,6 +26,9 @@ const CardSchema = new Schema(
         category: {
             type: String,
             default: "English"
+        },
+        character: {
+            type: String
         }
     }
 )

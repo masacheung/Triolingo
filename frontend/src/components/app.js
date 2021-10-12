@@ -15,6 +15,8 @@ import "../styles/splash.css";
 import "../styles/navbar.css";
 import "../styles/team.css";
 import "../styles/session.css";
+import "../styles/mainpage.css"
+import "../styles/character_filterbox.css"
 
 
 const App = () => (

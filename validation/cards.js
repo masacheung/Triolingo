@@ -31,6 +31,10 @@ module.exports = function validateCardInput(data) {
         errors.category = 'Category field is required'
     }
 
+    if(!Validator.isLength(data.character, {min: 1, max: 1})) {
+        errors.character = "Character must be 1 letter";
+    }
+
 
     return {
         errors,

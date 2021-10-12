@@ -7,10 +7,15 @@ const Navbar = ({loggedIn, logout, currentUser}) => {
         return <Link to="/login">Log In</Link>
     }
 
+
     const logoutButton = () => {
+        let name = '';
+        if (currentUser) {
+            name = currentUser.username;
+        }
         return (
             <ul className="nav-welcome-logout">
-                <li className="nav-welcome">Welcome, {currentUser}</li>
+                <li className="nav-welcome">Welcome, {name}</li>
                 <li><button onClick={logout}>Logout</button></li>
             </ul>
         )

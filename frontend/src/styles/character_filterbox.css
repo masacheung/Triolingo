@@ -1,0 +1,16 @@
+.ant-checkbox span {
+  font-size: 20px;
+}
+
+.ant-checkbox input {
+  margin-left: 5px;
+  margin-right: 2px;
+}
+
+.ant-checkbox-group {
+  margin-top: -5px;
+}
+
+.ant-checkbox-group label {
+  font-size: 20px;
+}
