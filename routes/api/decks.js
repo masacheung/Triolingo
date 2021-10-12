@@ -53,11 +53,19 @@ router.post('/',
 
   // deleting a deck
 router.delete('/:id', (req, res) => {
-    Deck.findById(req.params.id)
-        .then(deck => res.json(`${deck} DELETE request called`))
-        .catch(err =>
-            res.status(404).json({ nodecksfound: 'No deck found with this ID' })
-        );
+    Deck.deleteOne({_id: req.params.id}).then(
+      () => {
+        res.status(200).json({
+          message: "Deck is deleted!"
+        });
+      }
+    ).catch(
+      (error) => {
+        res.status(400).json({
+          error: error
+        })
+      }
+    )
 });
 
-  module.exports = router;
+module.exports = router;
