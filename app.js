@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
+const passport = require('passport');
 const users = require('./routes/api/users');
 const cards = require('./routes/api/cards');
+const decks = require('./routes/api/decks');
 const User = require('./models/User');
 const Card = require('./models/Card');
-const passport = require('passport');
+const Deck = require('./models/Deck');
 
 const path= require('path');
 if (process.env.NODE_ENV === 'production') {
@@ -33,6 +35,7 @@ const port = process.env.PORT || 5000;
 
 app.use("/api/users", users);
 app.use("/api/cards", cards);
+app.use("/api/decks", decks);
 
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)})

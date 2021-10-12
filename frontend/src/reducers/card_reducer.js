@@ -1,4 +1,4 @@
-import { RECEIVE_CARDS, RECEIVE_CARD, RECEIVE_NEW_CARD, REMOVE_CARD } from '../actions/card_actions';
+import { RECEIVE_CARDS, RECEIVE_CARD, REMOVE_CARD } from '../actions/card_actions';
 
 const cardReducer = (state = {}, action ) => {
   Object.freeze(state);

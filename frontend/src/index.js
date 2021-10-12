@@ -9,6 +9,7 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
 import * as card_actions from './actions/card_actions';
+import * as deck_actions from './actions/deck_actions';
 import * as SessionAPIUtil from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,10 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   
   window.addCard = card_actions.addCard;
+  window.deleteCard = card_actions.deleteCard;
   window.fetchCard = card_actions.fetchCard;
   window.fetchCards = card_actions.fetchCards;
   window.updateCard = card_actions.updateCard;
 
+  window.addDeck = deck_actions.addDeck;
+  window.deleteDeck = deck_actions.deleteDeck;
+  window.fetchDeck = deck_actions.fetchDeck;
+  window.fetchDecks = deck_actions.fetchDecks;
+  window.updateDeck = deck_actions.updateDeck;
+  
   window.signup = SessionAPIUtil.signup;
 
   ReactDOM.render(<Root store={store} />, root);
