@@ -39,16 +39,17 @@
     color: #fff;
     border-radius: 5px;
     width: 85%;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 18px;
     transition: .3s background-color ease-in-out;
     height: 35px;
-    padding: 10px 15px;
+    padding: 10px;
     border: none;
     display: flex;
     align-items: center;
     cursor: pointer;
     text-align: center;
+    margin-left: 3%;
 }
 
 .new-card:hover {
@@ -92,7 +93,6 @@
     display: flex;
     font-size: 2.5rem;
     text-align: center;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 180%;
     bottom: 0;
 }

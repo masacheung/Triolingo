@@ -1,10 +1,17 @@
 import { connect } from "react-redux";
 import Nav from "./nav";
+import { addCard } from "../../actions/card_actions";
 
 const mSTP = (state) => {
     return {
-        state: state
+        currentUser: state.session.user
     }
 }
 
-export default connect(mSTP)(Nav)
+const mDTP = (dispatch) => {
+    return {
+        addCard: (card) => dispatch(addCard(card))
+    }
+}
+
+export default connect(mSTP, mDTP)(Nav)

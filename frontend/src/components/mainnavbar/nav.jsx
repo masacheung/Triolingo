@@ -10,6 +10,12 @@ class Nav extends React.Component {
     }
 
     render() {
+
+        let name = '';
+        if (this.props.currentUser) {
+            name = this.props.currentUser.username;
+        }
+
         return (
             <div className="main-nav">
                 <div className="main-nav-user">
@@ -17,7 +23,7 @@ class Nav extends React.Component {
                         <FontAwesomeIcon icon={faUserAlt}/>
                     </div>
                     <div className="main-nav-username"> 
-                        Username
+                        {name}
                     </div>
                 </div>
                 <button className="new-card">
