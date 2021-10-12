@@ -1,22 +1,29 @@
 import React from "react";
 
-const CardsIndex = props => {
-
-    const componentDidMount = () => {
-        props.fetchCards();
+class CardsIndex extends React.Component{
+    constructor(props) {
+        super(props);
     }
 
-    return (
-        <div className="cards-index">
-            <div className="cards-index-header">
-                <h2>All Cards</h2>
-            </div>
+    componentDidMount() {
+        this.props.fetchCards();
+    }
 
-            <div className="all-cards">
-                <CardsIndexList cards={cards} currentUser={currentUser} fetchCard={fetchCard} addCard={addCard} deleteCard={deleteCard}/>
+    render() {
+        return (
+            <div className="cards-index">
+                <div className="cards-index-header">
+                    <h2>All Cards</h2>
+                </div>
+
+                <div className="all-cards">
+                    {this.state.cards.map( card=> (
+                        <CardsIndexList card={card} key={card._id}/>
+                    ))}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 };
 
 export default CardsIndex;
