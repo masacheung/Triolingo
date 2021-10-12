@@ -2,14 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../../styles/img/logo.png"
 
-const Navbar = ({loggedIn, logout}) => {
+const Navbar = ({loggedIn, logout, currentUser}) => {
     const loginButton = () => {
         return <Link to="/login">Log In</Link>
     }
 
     const logoutButton = () => {
-        return <button onClick={logout}>Logout</button>
-        
+        return (
+            <ul className="nav-welcome-logout">
+                <li className="nav-welcome">Welcome, {currentUser}</li>
+                <li><button onClick={logout}>Logout</button></li>
+            </ul>
+        )
     }
 
     return (
