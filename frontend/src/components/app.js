@@ -14,6 +14,7 @@ import "../styles/reset.css";
 import "../styles/splash.css";
 import "../styles/navbar.css";
 import "../styles/team.css";
+import "../styles/session.css";
 
 
 const App = () => (

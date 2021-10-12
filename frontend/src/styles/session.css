@@ -1,0 +1,101 @@
+.session-form-background {
+    background: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    min-width: 100%;
+}
+
+.errors > ul{
+    padding-left: 0px;
+    list-style-type: none;
+    color: red;
+    padding-bottom: 10px;
+}
+
+.session-form-container {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 512px;
+    box-shadow: 0px 5px 22px rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+.session-form-body {
+    margin: 60px 100px 50px;
+    width: 320px;
+}
+
+.session-heading {
+    text-align: center;
+}
+
+.user-auth-logo {
+    width: 50%;
+    height: 50%;
+    padding: 75px;
+    margin-top: -50px;
+    margin-bottom: -65px;
+}
+
+.session-heading h1 {
+    font-size: 56px;
+    margin-bottom: 18px;
+}
+
+.session-form ul {
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+}
+
+.username-field, .password-field {
+    color: #737373;
+    border-radius: 7px;
+    border: 1px solid #e6e6e6;
+    padding: 12px 16px;
+    width: 87%;
+    margin: 5px;
+}
+
+.session-form-continue {
+    background-color: #4c82e6;
+    border-radius: 7px;
+    margin-top: -9px;
+    width: 87%;
+    color: #ffffff;
+    border-color: #4c82e6;
+    border-width: 1px;
+    border-style: solid;
+    transition: all .3s ease;
+    padding: 12px 16px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.session-form-continue:hover {
+    background-color: #769de4;
+}
+
+.context-switch {
+    margin-top: 34px;
+    text-align: center;
+    font-size: 16px;
+    color: #737373;
+    line-height: 35px;
+}
+
+.context-switch .switch {
+    color: #4c82e6;
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.context-switch .switch:hover{
+    color: #769de4;
+}
