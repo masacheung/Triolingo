@@ -29,6 +29,7 @@ const App = () => (
         <Switch>
             <ProtectedRoute path="/main" component={Main}/>
             <ProtectedRoute path="/cards" component={Main} />
+            <ProtectedRoute path="/decks" component={Main} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
 
