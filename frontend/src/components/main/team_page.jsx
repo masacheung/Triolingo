@@ -18,10 +18,10 @@ const TeamPage = () => {
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin}/>
+                            <FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/>
                         </a>
                         <a href="https://github.com/masacheung" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faGithub}/>
+                            <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
                         </a>
                     </div>
                 </div>
@@ -33,11 +33,11 @@ const TeamPage = () => {
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/jwp007/" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin}/>
+                            <FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/>
 
                         </a>
                         <a href="https://github.com/dannyjwpark" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faGithub}/>
+                            <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
 
                         </a>
                     </div>
@@ -50,10 +50,10 @@ const TeamPage = () => {
                     </div>
                     <div className="social-links">
                         <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin}/>
+                            <FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/>
                         </a>
                         <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faGithub}/>
+                            <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
                         </a>
                     </div>
                 </div>
