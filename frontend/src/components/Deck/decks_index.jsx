@@ -18,15 +18,13 @@ class DecksIndex extends React.Component{
             decks = Object.values(this.props.decks.data)
         }
         return(
-            <div>
-                <div>
-                    <h2>Decks</h2>
+            <div className="decks-index-container">
+                <div className="decks-index-header">
+                    <h1 className="decks-header">All Decks</h1>
                 </div>
 
-                <div>
-                    {decks.map( deck => (
-                        <DecksIndexList deck={deck} key={deck._id}  fetchDecks={fetchDecks} fetchDeck={fetchDeck} addDeck={addDeck} deleteDeck={deleteDeck}/>
-                    ))}
+                <div className="deck-list-container">
+                        <DecksIndexList decks={decks} fetchDecks={fetchDecks} fetchDeck={fetchDeck} addDeck={addDeck} deleteDeck={deleteDeck}/>
                 </div>
             </div>
         )

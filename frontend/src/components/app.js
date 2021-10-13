@@ -11,6 +11,8 @@ import TeamPage from './main/team_page';
 import Main from './main';
 import MainNav from './mainnavbar/nav_container';
 
+import DictionaryApi from './dictionary_api/dictionary_api'
+
 import "../styles/reset.css";
 import "../styles/splash.css";
 import "../styles/navbar.css";
@@ -20,6 +22,9 @@ import "../styles/mainpage.css"
 import "../styles/character_filterbox.css";
 import "../styles/mainnav.css";
 import "../styles/main.css";
+import "../styles/cards.css";
+import "../styles/modal.css";
+import "../styles/decks.css";
 
 
 const App = () => (
@@ -32,9 +37,12 @@ const App = () => (
             <ProtectedRoute path="/decks" component={Main} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
-
+    
             <Route exact path="/team" component={TeamPage}/>
             <AuthRoute exact path="/" component={SplashPage}/>
+
+            {/* for testing api calls */}
+            <Route exact path="/apitesting" component={DictionaryApi}/>
         </Switch>
 
     </div>

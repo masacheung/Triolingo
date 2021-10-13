@@ -20,6 +20,10 @@ class Nav extends React.Component {
         this.handleCreateCard = this.handleCreateCard.bind(this);
     }
 
+    componentDidMount(){
+        this.props.fetchCards();
+    }
+
     update(field){
         return e => {this.setState({[field]: e.currentTarget.value})}
     }
@@ -73,7 +77,7 @@ class Nav extends React.Component {
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
-                        <FontAwesomeIcon icon={faInbox}/> All Categories
+                        <Link to="/decks"><FontAwesomeIcon icon={faInbox}/> All Categories</Link>
                     </li>
                 </ul>
                 <div className="social">
@@ -88,9 +92,10 @@ class Nav extends React.Component {
                         <label className="create-modal-label">Definition</label>
                         <input className="create-modal-input" type="text" placeholder="Flash Card Definition" value={this.state.definition} onChange={this.update('definition')}/>
 
-
-                        <button onClick={this.handleCloseModal}>Cancel</button>
-                        <button onClick={this.handleCreateCard}>Create</button>
+                        <div className="modal-buttons">
+                            <button onClick={this.handleCloseModal} className="cancel">Cancel</button>
+                            <button onClick={this.handleCreateCard} className="continue">Create</button>
+                        </div>
                     </div>
                 </Modal>
             </div>

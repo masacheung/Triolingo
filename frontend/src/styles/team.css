@@ -3,6 +3,7 @@
     background-color: #F8F8FF;
     clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
     padding: 5rem 10%;
+    margin-top: 10%;
 }
 
 .team-page-container > h1 {
