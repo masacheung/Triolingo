@@ -3,11 +3,14 @@
     align-items: center;
     height: 100px;
     padding: 0px 30px;
-    position: relative;
+    width: 100vw;
+    position: fixed;
     margin: 0 auto;
     border-bottom: 2px solid #000000;
     background-color: #444343;
     color: white;
+    top: 0px;
+    z-index: 1;
 }
 
 .logo-navbar {
@@ -97,6 +100,7 @@
     letter-spacing: 1.2px;
     font-weight: 50;
     outline: none;
+    margin-right: 50px;
 }
 
 
@@ -124,6 +128,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    margin-right: 50px;
 }
 
 .nav-welcome-logout > li > button:hover {

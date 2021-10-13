@@ -8,6 +8,7 @@
     grid-template-rows: 80px 1fr;
     text-decoration: none;
     position: relative;
+    margin-left: 200px;
 }
 
 .cards-header {

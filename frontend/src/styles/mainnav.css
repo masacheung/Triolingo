@@ -9,6 +9,10 @@
     box-shadow: 0 0 3px 1px rgb(201 221 243 /50%);
     grid-template-rows: 70px 100px 40px 365px 1fr 200px;
     display: grid;
+    margin-top: 100px;
+    position: fixed;
+    top: 0px;
+    z-index: 0.9;
 }
 
 .main-nav-user {
@@ -81,7 +85,7 @@
     text-align: center;
     justify-content: center;
     position: absolute;
-    bottom: 50px;
+    bottom: 150px;
 }
 
 .social > a:hover {
@@ -93,7 +97,7 @@
     font-size: 2.5rem;
     text-align: center;
     padding-left: 180%;
-    bottom: 0;
+    bottom: -50px;
 }
 
 .new-card-name {
