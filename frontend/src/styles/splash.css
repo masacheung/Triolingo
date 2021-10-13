@@ -175,3 +175,8 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.copyright {
+    display: flex;
+    bottom: 0px;
+}

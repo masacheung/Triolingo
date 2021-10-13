@@ -71,7 +71,9 @@ const SplashPage = () => {
                         <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/">LinkedIn</a>
                     </ul>
                 </div>
-
+            </div>
+            <div className="copyright">
+                    Copyright © 2021 Triolingo
             </div>
         </div>
     )
