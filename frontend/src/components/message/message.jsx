@@ -1,4 +1,5 @@
 import React from 'react';
+import MessagesList from './message_list';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -50,11 +51,11 @@ class Message extends React.Component{
                     </h1>
                 </div>
                 <div className="message-list-container">
-
+                    <MessagesList messages={this.props.messages} fetchMessages={this.props.fetchMessages}/>
                 </div>
                 <div className="message-input-container">
                     <form onSubmit={this.handleSubmit}>
-                        <input className="message-input" type="text" placeholder="enter message" onChange={this.update} value={this.state.content}/>
+                        <input className="message-input" type="text" placeholder="Enter Message" onChange={this.update} value={this.state.content}/>
                         <button type="submit">
                             <FontAwesomeIcon icon={faPaperPlane} className="message-submit-button"/>
                         </button>

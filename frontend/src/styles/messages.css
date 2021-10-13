@@ -68,3 +68,34 @@
 .message-submit-button:hover {
     background-color: #3067CC;
 }
+
+.message-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-item {
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+    width: 100%;
+    height: range(60px, 100px);
+    padding: 10px 10px 15px;
+    background-color: #F8F8FF;
+}
+
+.message-item > .message-item-user {
+    color: #A0A0A0;
+    padding-bottom: 10px;
+}
+
+.message-item > .message-item-message {
+    line-height: 20px;
+}
+
+.message-list > li:nth-child(odd) {
+    background-color: #fff;
+}
