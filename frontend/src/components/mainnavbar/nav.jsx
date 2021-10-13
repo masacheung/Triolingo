@@ -12,12 +12,17 @@ class Nav extends React.Component {
             title: "",
             definition: "",
             user: this.props.currentUser._id,
-            modal: false
+            modal: false,
+            decktitle: "",
+            deckModal: false
         }
 
         this.handleCloseModal = this.handleCloseModal.bind(this);
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleCreateCard = this.handleCreateCard.bind(this);
+        this.handleOpenDeckModal = this.handleOpenDeckModal.bind(this);
+        this.handleCloseDeckModal = this.handleCloseDeckModal.bind(this);
+        this.handleCreateDeck = this.handleCreateDeck.bind(this);
     }
 
     componentDidMount(){
@@ -47,6 +52,37 @@ class Nav extends React.Component {
         this.handleCloseModal();
     }
 
+    handleOpenDeckModal() {
+        this.setState({deckModal: true})
+    }
+
+    handleCloseDeckModal() {
+        this.setState({deckModal: false})
+    }
+
+    handleCreateCard() {
+        let card = {
+            title: this.state.title,
+            definition: this.state.definition,
+            user: this.state.user
+        }
+
+        this.props.addCard(card);
+        this.handleCloseModal();
+    }
+
+    handleCreateDeck() {
+        console.log(this.state.decktitle);
+        let deck = {
+            title: this.state.decktitle,
+            user: this.state.user
+        }
+        console.log(deck);
+
+        this.props.addDeck(deck);
+        this.handleCloseDeckModal();
+    }
+
     render() {
 
         let name = '';
@@ -64,9 +100,14 @@ class Nav extends React.Component {
                         {name}
                     </div>
                 </div>
+                <div>
                 <button className="new-card" onClick={this.handleOpenModal}>
                     <FontAwesomeIcon icon={faPlus}/><div className="new-card-name">Add Card</div>
                 </button>
+                <button className="new-deck" onClick={this.handleOpenDeckModal}>
+                    <FontAwesomeIcon icon={faPlus}/><div className="new-card-name">Create Deck</div>
+                </button>
+                </div>
                 <ul className="main-nav-list">
                     <li>
                         <Link to="/main"><FontAwesomeIcon icon={faQuestionCircle}/> FAQ</Link>
@@ -95,6 +136,18 @@ class Nav extends React.Component {
                         <div className="modal-buttons">
                             <button onClick={this.handleCloseModal} className="cancel">Cancel</button>
                             <button onClick={this.handleCreateCard} className="continue">Create</button>
+                        </div>
+                    </div>
+                </Modal>
+                <Modal isOpen={this.state.deckModal} className="overlay">
+                    <div className="my-create-modal">
+                        <h2 className="create-modal-title">Create new Deck</h2>
+                        <label className="create-modal-label">Title</label>
+                        <input className="create-modal-input" type="text" placeholder="Deck Title" value={this.state.decktitle} onChange={this.update('decktitle')}/>
+                        
+                        <div className="modal-buttons">
+                            <button onClick={this.handleCloseDeckModal} className="cancel">Cancel</button>
+                            <button onClick={this.handleCreateDeck} className="continue">Create</button>
                         </div>
                     </div>
                 </Modal>

@@ -8,6 +8,11 @@ class DecksIndex extends React.Component{
     componentDidMount() {
         this.props.fetchDecks();
     }
+
+    componentDidUpdate(){
+        this.props.fetchDecks();
+    }
+
     render() {
 
         console.log(this.props.decks)

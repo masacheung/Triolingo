@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Nav from "./nav";
 import { addCard, fetchCards } from "../../actions/card_actions";
+import { addDeck } from "../../actions/deck_actions";
 
 const mSTP = (state) => {
     return {
@@ -11,7 +12,8 @@ const mSTP = (state) => {
 const mDTP = (dispatch) => {
     return {
         fetchCards: () => dispatch(fetchCards()),
-        addCard: (card) => dispatch(addCard(card))
+        addCard: (card) => dispatch(addCard(card)),
+        addDeck: (deck) => dispatch(addDeck(deck))
     }
 }
 
