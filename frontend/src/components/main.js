@@ -6,7 +6,9 @@ import { Switch } from "react-router-dom";
 import MainPage from "./main/main_page";
 import CardsIndexContainer from "./cards/cards_index_container";
 import MainNav from "./mainnavbar/nav_container";
-import DecksIndexContainer from "./Deck/decks_index_container"
+import DecksIndexContainer from "./Deck/decks_index_container";
+import DeckShowContainer from "./Deck/deck_show_container";
+
 
 const Main = () => {
     return( 
@@ -16,6 +18,8 @@ const Main = () => {
                 <ProtectedRoute path='/main' component={MainPage}/>
                 <ProtectedRoute path='/cards' component={CardsIndexContainer} />
                 <ProtectedRoute path="/decks" component={DecksIndexContainer} />
+
+
             </Switch>
         </div>
     )
