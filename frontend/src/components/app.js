@@ -22,6 +22,7 @@ import "../styles/mainnav.css";
 import "../styles/main.css";
 import "../styles/cards.css";
 import "../styles/modal.css";
+import "../styles/decks.css";
 
 
 const App = () => (

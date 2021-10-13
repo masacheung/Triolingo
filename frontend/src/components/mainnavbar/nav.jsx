@@ -77,7 +77,7 @@ class Nav extends React.Component {
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
-                        <FontAwesomeIcon icon={faInbox}/> All Categories
+                        <Link to="/decks"><FontAwesomeIcon icon={faInbox}/> All Categories</Link>
                     </li>
                 </ul>
                 <div className="social">
