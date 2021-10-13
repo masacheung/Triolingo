@@ -13,9 +13,6 @@ const DictionaryApi = () => {
   // `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
   const dictionaryApi = async () => {
       const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
-      // const data = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`, {
-      //   mode: 'no-cors'
-      // })
       .then((data) => {
         console.log(Object.values(data.data));
       })

@@ -15,13 +15,13 @@ const cors = require('cors');
 // cors configuration for api calls
 // ---------------------------------
 // const { createProxyMiddleware } = require('http-proxy-middleware');
+// app.use('/api', createProxyMiddleware({ target: 'http://www.example.org', changeOrigin: true }));
 
 const corsOptions ={
     origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
-// app.use('/api', createProxyMiddleware({ target: 'http://www.example.org', changeOrigin: true }));
 app.use(cors(corsOptions));
 
 app.use(function(req, res, next) {
