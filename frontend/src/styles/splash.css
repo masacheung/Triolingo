@@ -9,6 +9,7 @@
   justify-content: center;
   clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
   padding: 7rem 20%;
+  margin-top: 10%;
 }
 
 .splash > hr {
