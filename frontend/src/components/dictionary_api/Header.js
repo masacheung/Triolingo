@@ -38,12 +38,12 @@ const Header = ({
             label="Language"
             value={category}
             onChange={(e) => handleChange(e)}
-            className="select"
+            className="select-api-category"
           >
-            <option value="en">English</option>
-            <option value="ko">Korean</option>
-            <option value="ja">Japanese</option>
-            <option value="es">Spanish</option>
+            <option className="select-api-option" value="en">English</option>
+            <option className="select-api-option" value="ko">Korean</option>
+            <option className="select-api-option" value="ja">Japanese</option>
+            <option className="select-api-option" value="es">Spanish</option>
           </TextField>
       </div>
     </div>
