@@ -46,7 +46,7 @@ class Message extends React.Component{
         return (
             <div className="message-container">
                 <div className="message-index-header">
-                    <h1 classNama="message-header">
+                    <h1 className="message-header">
                         User Messages
                     </h1>
                 </div>
