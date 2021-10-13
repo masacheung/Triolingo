@@ -1,7 +1,14 @@
 # Triolingo
 
-## Table of Contents
+## Demo
 
+<a href="https://triolingo-mern.herokuapp.com/#/">Try Triolingo </a> via the live demo login.
+
+## Table of Contents
+1. [Overview](https://github.com/masacheung/Triolingo#overview)
+2. [Technologies](https://github.com/masacheung/Triolingo#technologies)
+3. [Features](https://github.com/masacheung/Triolingo#features)
+4. [In-progress & Planned]
 
 Your Best Education App!!
 A flash card system with built-in spaced repetition function to help you retain your knowledge.
@@ -13,6 +20,7 @@ A flash card system with built-in spaced repetition function to help you retain 
 2. Express
 3. React
 4. NodeJS
+5. CSS
 
 ## Project Team
 
