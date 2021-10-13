@@ -9,6 +9,8 @@ const decks = require('./routes/api/decks');
 const User = require('./models/User');
 const Card = require('./models/Card');
 const Deck = require('./models/Deck');
+const messages = require('./routes/api/messages');
+const Message = require('./models/Message');
 
 const path= require('path');
 if (process.env.NODE_ENV === 'production') {
@@ -36,6 +38,7 @@ const port = process.env.PORT || 5000;
 app.use("/api/users", users);
 app.use("/api/cards", cards);
 app.use("/api/decks", decks);
+app.use("/api/messages", messages);
 
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)})
