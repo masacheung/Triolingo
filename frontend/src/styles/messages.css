@@ -43,7 +43,7 @@
 
 .message-input-container > form {
     display: flex;
-    padding: 10px 5px 20px;
+    padding: 10px 5px 10px;
     align-items: center;
     margin-left: 40%;
 }
@@ -52,4 +52,19 @@
     border: none;
     border: 1px solid lightgrey;
     border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+.message-submit-button {
+    background-color: #4C82E6;
+    color: white;
+    padding: 8px 10px 8px 8px;
+    align-items: center;
+    border-radius: 5px;
+    transition: .3s background-color ease-in-out;
+    margin-left: 5px;
+}
+
+.message-submit-button:hover {
+    background-color: #3067CC;
 }
