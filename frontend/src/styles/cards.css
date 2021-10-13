@@ -82,3 +82,9 @@
     font-weight: 400;
     padding: 7px 0;
 }
+
+.audio {
+    position: absolute;
+    bottom: 5px;
+    margin-left: 10px;
+}
