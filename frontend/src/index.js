@@ -12,6 +12,9 @@ import * as card_actions from './actions/card_actions';
 import * as deck_actions from './actions/deck_actions';
 import * as SessionAPIUtil from './util/session_api_util';
 
+import * as MessageAPIUtil from './util/message_api_util';
+import * as MessageActions from './actions/message_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (localStorage.jwtToken) {
@@ -48,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.updateDeck = deck_actions.updateDeck;
   
   window.signup = SessionAPIUtil.signup;
+
+  window.getMessages = MessageAPIUtil.getMessages;
+  window.createMessage = MessageAPIUtil.createMessage;
 
   ReactDOM.render(<Root store={store} />, root);
 });
