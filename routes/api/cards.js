@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 // route for a user to post a card
 router.post('/',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: true }),
     (req, res) => {
       const { errors, isValid } = validateCardInput(req.body);
   
@@ -47,7 +47,6 @@ router.post('/',
         synonyms: req.body.synonyms,
         audio: req.body.audio,
         notes: req.body.notes,
-        // user: req.user.id,
         category: req.body.category
       });
   

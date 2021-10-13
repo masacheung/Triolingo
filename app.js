@@ -1,5 +1,4 @@
 const express = require("express");
-const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const passport = require('passport');
@@ -9,6 +8,31 @@ const decks = require('./routes/api/decks');
 const User = require('./models/User');
 const Card = require('./models/Card');
 const Deck = require('./models/Deck');
+const app = express();
+const cors = require('cors');
+
+
+// cors configuration for api calls
+// ---------------------------------
+// const { createProxyMiddleware } = require('http-proxy-middleware');
+// app.use('/api', createProxyMiddleware({ target: 'http://www.example.org', changeOrigin: true }));
+
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+// ---------------------------------
+
+const messages = require('./routes/api/messages');
+const Message = require('./models/Message');
 
 const path= require('path');
 if (process.env.NODE_ENV === 'production') {
@@ -23,6 +47,7 @@ mongoose
     .then(() => console.log("Connected to mongoDB"))
     .catch(err => console.log(err))
 
+
 app.use(express.json());
 app.use(express.urlencoded({
     extended: false
@@ -36,6 +61,7 @@ const port = process.env.PORT || 5000;
 app.use("/api/users", users);
 app.use("/api/cards", cards);
 app.use("/api/decks", decks);
+app.use("/api/messages", messages);
 
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)})

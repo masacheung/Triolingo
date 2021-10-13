@@ -35,16 +35,18 @@ router.get('/:id', (req, res) => {
 
 // route for a user to post a deck
 router.post('/',
-    // passport.authenticate('jwt', { session: false }),
+    // passport.authenticate('jwt', { session: true }),
     (req, res) => {
+      console.log("reqreqreqreqreqreqreq")
+      console.log(req);
       const { errors, isValid } = validateDeckInput(req.body);
   
       if (!isValid) {
         return res.status(400).json(errors);
       }
-  
       const newDeck = new Deck({
-        title: req.body.title
+        title: req.body.title,
+        user: req.user.id
       });
   
       newDeck.save().then(deck => res.json(deck));

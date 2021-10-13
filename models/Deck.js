@@ -7,7 +7,7 @@ const DeckSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'cards'        
     }],
-    user_: {
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'users'        
     },
@@ -15,6 +15,12 @@ const DeckSchema = new Schema(
         type: String,
         required: true,
         unique: true
+    }
+  },
+  {
+    timestamps: {
+      createdAt: true,
+      updatedAt: true,
     }
   }
 )

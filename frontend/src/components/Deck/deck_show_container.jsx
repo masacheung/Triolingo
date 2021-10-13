@@ -5,6 +5,7 @@ import { fetchDecks, fetchDeck } from "../../actions/deck_actions";
 import { fetchCards, addCard } from "../../actions/card_actions";
 
 const mSTP = (state, ownProps) => ({
+    decks: state.decks,
     decks: Object.values(Object.assign({},state.decks.data)),
     // decks: Object.assign({}, state.decks.data),
     cards: Object.values(Object.assign({},state.cards.data)),

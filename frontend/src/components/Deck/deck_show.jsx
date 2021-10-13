@@ -14,9 +14,13 @@ class DeckShow extends React.Component{
         this.props.fetchCards();
     }
     render() {
-        
-        const deckshow = this.props.decks.map(deck => (
-            <div><h2>deck.title</h2></div>
+        let decks = [];
+        if (this.props.decks.data) {
+            decks = Object.values(this.props.decks.data)
+        }
+
+        let deckshow = decks.map(deck => (
+            <h2>deck.title</h2>
         ))
 
         return(

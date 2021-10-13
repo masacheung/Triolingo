@@ -4,9 +4,6 @@ import Header from "./Header";
 import { useEffect, useState } from "react";
 import Definitions from "./Definitions";
 
-// const cors = require('cors');
-
-
 
 const DictionaryApi = () => {
   const [word, setWord] = useState("");
@@ -15,9 +12,7 @@ const DictionaryApi = () => {
 
   // `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
   const dictionaryApi = async () => {
-      const data = await axios.get(
-        `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
-      )
+      const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
       .then((data) => {
         console.log(Object.values(data.data));
       })
