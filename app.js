@@ -8,7 +8,6 @@ const decks = require('./routes/api/decks');
 const User = require('./models/User');
 const Card = require('./models/Card');
 const Deck = require('./models/Deck');
-<<<<<<< HEAD
 const app = express();
 const cors = require('cors');
 
@@ -32,10 +31,8 @@ app.use(function(req, res, next) {
 });
 // ---------------------------------
 
-=======
 const messages = require('./routes/api/messages');
 const Message = require('./models/Message');
->>>>>>> masa-message
 
 const path= require('path');
 if (process.env.NODE_ENV === 'production') {
