@@ -1,6 +1,13 @@
 import React from 'react';
 
 const Card = props => { 
+
+    let synonyms = '';
+
+    if(props.card.synonyms) {
+        synonyms = props.card.synonyms.join(', ');
+    }
+
     return(
         <div className="card">
             <div>
@@ -9,7 +16,13 @@ const Card = props => {
                         <h1>{props.card.title}</h1>
                     </div>
                     <div>
-                    <h3>{props.card.definition}</h3>
+                        <h3>Definition: {props.card.definition}</h3>
+                    </div>
+                    <div>
+                        <h3>Synonyms: {props.card.synonyms.join(', ')}</h3>
+                    </div>
+                    <div>
+                        <audio src={props.card.audio} controls autoPlay>Audio: {props.card.audio}</audio>
                     </div>
                 </div>
             </div>
