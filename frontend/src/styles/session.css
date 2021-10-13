@@ -62,6 +62,10 @@
     margin: 5px;
 }
 
+.username-field:focus, .password-field:focus {
+    border: 1px solid #73c2fb;
+}
+
 .session-form-continue {
     background-color: #4c82e6;
     border-radius: 7px;
