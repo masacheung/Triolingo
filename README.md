@@ -22,6 +22,8 @@ A flash card system with built-in spaced repetition function to help you retain 
 4. NodeJS
 5. CSS
 
+## Overview
+
 ## Project Team
 
 | |Role| Contacts|
