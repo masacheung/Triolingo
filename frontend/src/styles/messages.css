@@ -1,0 +1,55 @@
+::-webkit-scrollbar {
+    display: none
+}
+
+.message-container {
+    display: grid;
+    height: 92vh;
+    grid-template-rows: 80px 1fr;
+    text-decoration: none;
+    position: relative;
+    margin-left: 200px;
+    margin-top: 100px;
+}
+
+.message-header {
+    letter-spacing: 3px;
+    color: #444343;
+    font-weight: 300;
+    padding-left: 30px;
+}
+
+.message-index-header {
+    padding: 10px 30px;
+    border-bottom: 1px solid rgb(230,230,230);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.message-index-header > h1 {
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    width: 100vw;
+}
+
+.message-input-container {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgb(230,230,230);
+}
+
+.message-input-container > form {
+    display: flex;
+    padding: 10px 5px 20px;
+    align-items: center;
+    margin-left: 40%;
+}
+
+.message-input {
+    border: none;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
