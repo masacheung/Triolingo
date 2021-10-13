@@ -4,7 +4,7 @@
 
 .decks-index-container {
     display: grid;
-    height: 100vh;
+    height: 92vh;
     grid-template-rows: 80px 1fr;
     text-decoration: none;
     position: relative;
@@ -32,6 +32,7 @@
     align-items: center;
     font-size: 28px;
     font-weight: 600;
+    width: 100vw;
 }
 
 .deck-list-container {

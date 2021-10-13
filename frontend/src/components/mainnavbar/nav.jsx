@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle, faInbox} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle, faInbox, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Modal from 'react-modal';
+
 
 class Nav extends React.Component {
     constructor(props){
@@ -117,6 +118,10 @@ class Nav extends React.Component {
                     <br className="main-nav-gap"/>
                     <li>
                         <Link to="/decks"><FontAwesomeIcon icon={faInbox}/> All Categories</Link>
+                    </li>
+                    <br className="main-nav-gap"/>
+                    <li>
+                        <Link to="/messages"><FontAwesomeIcon icon={faPaperPlane}/> Messages</Link>
                     </li>
                 </ul>
                 <div className="social">

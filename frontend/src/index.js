@@ -55,5 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getMessages = MessageAPIUtil.getMessages;
   window.createMessage = MessageAPIUtil.createMessage;
 
+  window.getMessages = MessageActions.fetchMessages;
+  window.createMessage = MessageActions.createMessage;
+
   ReactDOM.render(<Root store={store} />, root);
 });

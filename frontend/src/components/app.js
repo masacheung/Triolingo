@@ -25,6 +25,7 @@ import "../styles/main.css";
 import "../styles/cards.css";
 import "../styles/modal.css";
 import "../styles/decks.css";
+import "../styles/messages.css"
 
 
 const App = () => (
@@ -35,6 +36,7 @@ const App = () => (
             <ProtectedRoute path="/main" component={Main}/>
             <ProtectedRoute path="/cards" component={Main} />
             <ProtectedRoute path="/decks" component={Main} />
+            <ProtectedRoute path="/messages" component={Main} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
     
