@@ -24,9 +24,7 @@ class DecksIndex extends React.Component{
                 </div>
 
                 <div className="deck-list-container">
-                    {decks.map( deck => (
-                        <DecksIndexList deck={deck} key={deck._id}  fetchDecks={fetchDecks} fetchDeck={fetchDeck} addDeck={addDeck} deleteDeck={deleteDeck}/>
-                    ))}
+                        <DecksIndexList decks={decks} fetchDecks={fetchDecks} fetchDeck={fetchDeck} addDeck={addDeck} deleteDeck={deleteDeck}/>
                 </div>
             </div>
         )

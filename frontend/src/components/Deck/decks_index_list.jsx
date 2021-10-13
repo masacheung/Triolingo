@@ -1,15 +1,18 @@
 import React from 'react';
+import Deck from './deck';
 
 const DecksIndexList = props => {
-    return(
-        <div className="deck-container">
-            <div className="deck">
-                <div className="deck-header">
-                    <h1>{props.deck.title}</h1>
-                </div>
+    const deckList = props.decks.map((deck) => {
+        if(!deck) return null;
+
+        return (
+            <div className="deck-container">
+                <Deck deck={deck}/>
             </div>
-        </div>
-    )
+        )
+    })
+
+    return deckList
 }
 
 export default DecksIndexList;

@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Card = props => {
-
-    
+const Card = props => { 
     return(
         <div className="card">
             <div>
