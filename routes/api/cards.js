@@ -47,7 +47,6 @@ router.post('/',
         synonyms: req.body.synonyms,
         audio: req.body.audio,
         notes: req.body.notes,
-        // user: req.user.id,
         category: req.body.category
       });
   

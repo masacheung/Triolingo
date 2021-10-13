@@ -11,7 +11,6 @@ class Nav extends React.Component {
         this.state = {
             title: "",
             definition: "",
-            user: this.props.currentUser._id,
             modal: false,
             decktitle: "",
             deckModal: false
@@ -45,7 +44,6 @@ class Nav extends React.Component {
         let card = {
             title: this.state.title,
             definition: this.state.definition,
-            user: this.state.user
         }
 
         this.props.addCard(card);

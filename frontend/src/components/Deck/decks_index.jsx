@@ -9,9 +9,9 @@ class DecksIndex extends React.Component{
         this.props.fetchDecks();
     }
 
-    componentDidUpdate(){
-        this.props.fetchDecks();
-    }
+    // componentDidUpdate(){
+    //     this.props.fetchDecks();
+    // }
 
     render() {
 
