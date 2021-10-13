@@ -10,6 +10,7 @@ const deckReducer = (state = {}, action ) => {
     case RECEIVE_DECK:
       nextState[action.deck.id] = action.deck.data
       return nextState;
+      // return {...state.deck, [action.deck.data._id]: action.deck.data}
     case REMOVE_DECK:
       delete nextState[action.deck.id]
       return nextState;

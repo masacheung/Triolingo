@@ -5,14 +5,16 @@ import { fetchDecks, fetchDeck } from "../../actions/deck_actions";
 import { fetchCards, addCard } from "../../actions/card_actions";
 
 const mSTP = (state, ownProps) => ({
-    decks: state.decks,
-    cards: state.cards,
-    deck: state.decks[ownProps.match.params.deckId],
+    decks: Object.values(Object.assign({},state.decks.data)),
+    // decks: Object.assign({}, state.decks.data),
+    cards: Object.values(Object.assign({},state.cards.data)),
+    deck: state.decks[ownProps.match.params.id]
+    // deck: Object.assign({},state.decks.data)[state.cards.data._id],
     // card: state.card[ownProps.match.params.cardId],
-    currentDeckId: ownProps.match.params.deckId
+    // currentDeckId: ownProps.match.params.deckId
 })
 
-const mDTP = (dispatch, ownProps) => ({
+const mDTP = (dispatch) => ({
     fetchDecks: () => dispatch(fetchDecks()),
     fetchDeck: deckId => dispatch(fetchDeck(deckId)),
 

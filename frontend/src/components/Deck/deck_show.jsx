@@ -1,35 +1,27 @@
 import React from "react";
 
-import CardsIndexList from "../cards/cards_index_list";
+// import CardsIndexList from "../cards/cards_index_list";
 
 class DeckShow extends React.Component{
     constructor(props) {
         super(props)
+
     }
 
     componentDidMount() {
-        this.propss.fetchDeck(this.props.currentDeckId);
+        // this.propss.fetchDeck(this.props.match.params.id);
+        this.props.fetchDecks();
         this.props.fetchCards();
     }
     render() {
-        // let decks = [];
-        // if (this.props.decks.data) {
-        //     decks = Object.values(this.props.decks.data)
-        // }
-    
-
-        // let cards = [];
-        // if(this.props.cards.data) {
-        //     cards = Object.values(this.props.cards)
-        // }
-       
+        
+        const deckshow = this.props.decks.map(deck => (
+            <div><h2>deck.title</h2></div>
+        ))
 
         return(
             <div>
-                <div>
-                    {/* {deck.title} */}
-                </div>
-
+                {deckshow}
                 <div>
                         {/* cards under deck */}
                 </div>
