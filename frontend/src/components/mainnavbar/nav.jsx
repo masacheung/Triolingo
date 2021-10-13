@@ -20,6 +20,10 @@ class Nav extends React.Component {
         this.handleCreateCard = this.handleCreateCard.bind(this);
     }
 
+    componentDidMount(){
+        this.props.fetchCards();
+    }
+
     update(field){
         return e => {this.setState({[field]: e.currentTarget.value})}
     }

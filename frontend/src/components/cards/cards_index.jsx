@@ -10,6 +10,10 @@ class CardsIndex extends React.Component{
         this.props.fetchCards();
     }
 
+    componentDidUpdate(){
+        this.props.fetchCards();
+    }
+
     render() {
         let cards = [];
         if (this.props.cards.data) {
