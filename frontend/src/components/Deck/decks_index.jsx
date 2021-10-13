@@ -7,10 +7,13 @@ class DecksIndex extends React.Component{
     }
     componentDidMount() {
         this.props.fetchDecks();
+        this.interval = setInterval(() => {
+            this.refresh()
+        }, 1000)
     }
 
-    componentDidUpdate(prevProps){
-        if(prevProps.decks !== this.props.decks) this.props.fetchDecks();
+    refresh() {
+        this.props.fetchDecks();
     }
 
     render() {

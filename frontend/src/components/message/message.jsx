@@ -47,7 +47,7 @@ class Message extends React.Component{
             <div className="message-container">
                 <div className="message-index-header">
                     <h1 className="message-header">
-                        User Messages
+                        Discussion Board
                     </h1>
                 </div>
                 <div className="message-list-container">
