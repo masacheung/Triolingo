@@ -10,21 +10,24 @@ class CardsIndex extends React.Component{
         this.props.fetchCards();
     }
 
+    componentDidUpdate(){
+        this.props.fetchCards();
+    }
+
     render() {
         let cards = [];
         if (this.props.cards.data) {
             cards = Object.values(this.props.cards.data)
         }
+
         return (
-            <div className="cards-index">
+            <div className="cards-index-container">
                 <div className="cards-index-header">
-                    <h2>All Cards</h2>
+                    <h1 className="cards-header">All Cards</h1>
                 </div>
 
-                <div className="all-cards">
-                    {cards.map( card=> (
-                        <CardsIndexList card={card} key={card._id}/>
-                    ))}
+                <div className="card-list-container">
+                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards}/>
                 </div>
             </div>
         )

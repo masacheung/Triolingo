@@ -22,6 +22,9 @@ import "../styles/mainpage.css"
 import "../styles/character_filterbox.css";
 import "../styles/mainnav.css";
 import "../styles/main.css";
+import "../styles/cards.css";
+import "../styles/modal.css";
+import "../styles/decks.css";
 
 
 const App = () => (
@@ -31,6 +34,7 @@ const App = () => (
         <Switch>
             <ProtectedRoute path="/main" component={Main}/>
             <ProtectedRoute path="/cards" component={Main} />
+            <ProtectedRoute path="/decks" component={Main} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
     

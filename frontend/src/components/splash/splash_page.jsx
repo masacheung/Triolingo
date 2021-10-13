@@ -39,6 +39,9 @@ const SplashPage = () => {
                         <li>
                         <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/">LinkedIn</a>
                         </li>
+                        <li>
+                        <a href="https://angel.co/u/man-tat-masa-cheung">AngelList</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -71,7 +74,9 @@ const SplashPage = () => {
                         <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/">LinkedIn</a>
                     </ul>
                 </div>
-
+            </div>
+            <div className="copyright">
+                    Copyright © 2021 Triolingo
             </div>
         </div>
     )
