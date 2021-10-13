@@ -5,7 +5,7 @@ const MessageSchema = new Schema(
     {
         user: {
             type: String,
-            index: true
+            required: true
         },
         content: {
             type: String,

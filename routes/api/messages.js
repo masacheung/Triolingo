@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
         return res.status(400).json(errors);
     }
     const newMessage = new Message({
-        user: req.body.username,
+        user: req.body.user,
         content: req.body.content
     });
 
