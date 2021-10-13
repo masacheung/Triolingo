@@ -88,9 +88,10 @@ class Nav extends React.Component {
                         <label className="create-modal-label">Definition</label>
                         <input className="create-modal-input" type="text" placeholder="Flash Card Definition" value={this.state.definition} onChange={this.update('definition')}/>
 
-
-                        <button onClick={this.handleCloseModal}>Cancel</button>
-                        <button onClick={this.handleCreateCard}>Create</button>
+                        <div className="modal-buttons">
+                            <button onClick={this.handleCloseModal} className="cancel">Cancel</button>
+                            <button onClick={this.handleCreateCard} className="continue">Create</button>
+                        </div>
                     </div>
                 </Modal>
             </div>

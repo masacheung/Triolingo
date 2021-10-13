@@ -20,6 +20,8 @@ import "../styles/mainpage.css"
 import "../styles/character_filterbox.css";
 import "../styles/mainnav.css";
 import "../styles/main.css";
+import "../styles/cards.css";
+import "../styles/modal.css";
 
 
 const App = () => (
