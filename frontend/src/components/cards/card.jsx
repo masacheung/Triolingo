@@ -22,7 +22,7 @@ const Card = props => {
                         <h3>Synonyms: {props.card.synonyms.join(', ')}</h3>
                     </div>
                     <div>
-                        <audio src={props.card.audio} controls autoPlay>Audio: {props.card.audio}</audio>
+                        <audio src={props.card.audio} controls autoPlay/>
                     </div>
                 </div>
             </div>
