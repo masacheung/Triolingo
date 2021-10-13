@@ -9,6 +9,7 @@
 2. [Technologies](https://github.com/masacheung/Triolingo#technologies)
 3. [Features](https://github.com/masacheung/Triolingo#features)
 4. [In-progress & Planned]
+5. [Project Team](https://github.com/masacheung/Triolingo#project-team)
 
 Your Best Education App!!
 A flash card system with built-in spaced repetition function to help you retain your knowledge.
