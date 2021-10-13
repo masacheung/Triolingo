@@ -4,7 +4,7 @@ import Header from "./Header";
 import { useEffect, useState } from "react";
 import Definitions from "./Definitions";
 
-const cors = require('cors');
+// const cors = require('cors');
 
 
 
@@ -15,24 +15,14 @@ const DictionaryApi = () => {
 
   // `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
   const dictionaryApi = async () => {
-    // try {
       const data = await axios.get(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/language`
+        `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
       )
-      .then((response) => {
-        console.log(response.data)
+      .then((data) => {
+        console.log(Object.values(data.data));
       })
-      setMeanings(data.data); 
-    // catch (error) {
-    //   console.log(error);
-    // }
-    data.use(cors());
+      .catch ((error) => {console.log(error)})
   };
-
-
-
-  console.log('meanings: ');
-  console.log(meanings);
 
   useEffect(() => {
     dictionaryApi();
@@ -43,8 +33,8 @@ const DictionaryApi = () => {
     <div
       className="App"
       style={{
-        height: "100vh",
-        transition: "all 0.5s linear",
+        height: "120vh",
+        transition: "all 0.3s linear",
       }}
     >
       <Container
@@ -52,12 +42,12 @@ const DictionaryApi = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          height: "100vh",
+          height: "120vh",
           justifyContent: "space-evenly",
         }}
         >
         <div
-          style={{ position: "absolute", top: 0, right: 15, paddingTop: 10 }}
+          style={{ position: "relative", top: 0, right: 15, paddingTop: 10 }}
         >
         
         </div>
@@ -79,7 +69,6 @@ const DictionaryApi = () => {
     </div>
   );
 }
-
 
 
 export default DictionaryApi;

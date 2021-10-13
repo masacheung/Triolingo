@@ -41,6 +41,7 @@ const App = () => (
             <Route exact path="/team" component={TeamPage}/>
             <AuthRoute exact path="/" component={SplashPage}/>
 
+            {/* for testing api calls */}
             <Route exact path="/apitesting" component={DictionaryApi}/>
         </Switch>
 

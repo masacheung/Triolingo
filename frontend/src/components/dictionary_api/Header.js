@@ -1,4 +1,4 @@
-import { ThemeProvider, TextField } from "@material-ui/core";
+import TextField from "@material-ui/core/TextField";
 import React from "react";
 import { debounce } from "lodash";
 
@@ -15,6 +15,7 @@ const Header = ({
     setCategory(e.target.value);
     setWord("");
     setMeanings([]);
+    console.log(e.target.value)
   };
 
     const handleText = debounce((text) => {
@@ -25,14 +26,13 @@ const Header = ({
     <div className="header">
       <span className="title">{word ? word : ""}</span>
       <div className="inputs">
-        <ThemeProvider>
           <TextField
             className="search"
             id="filled-basic"
             // value={word}
             label="Search a Word"
             onChange={(e) => handleText(e.target.value)}
-          />
+          /> 
           <TextField
             select
             label="Language"
@@ -40,9 +40,11 @@ const Header = ({
             onChange={(e) => handleChange(e)}
             className="select"
           >
-            
+            <option value="en">English</option>
+            <option value="ko">Korean</option>
+            <option value="ja">Japanese</option>
+            <option value="es">Spanish</option>
           </TextField>
-        </ThemeProvider>
       </div>
     </div>
   );
