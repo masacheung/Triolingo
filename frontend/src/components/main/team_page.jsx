@@ -3,7 +3,7 @@ import Masa from "../../styles/img/masa.jpg";
 import Danny from "../../styles/img/danny.png";
 import Arwen from "../../styles/img/arwen.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, ffaAngllist } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faAngellist } from '@fortawesome/free-brands-svg-icons';
 
 const TeamPage = () => {
     return (
@@ -22,6 +22,9 @@ const TeamPage = () => {
                         </a>
                         <a href="https://github.com/masacheung" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
+                        </a>
+                        <a href="https://angel.co/u/man-tat-masa-cheung" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faAngellist} className="fontAwesome"/>
                         </a>
                     </div>
                 </div>
