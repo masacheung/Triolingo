@@ -26,6 +26,10 @@
     align-items: center;
     overflow: hidden;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    margin-top: 3px;
 }
 
 .message-index-header > h1 {
@@ -38,14 +42,15 @@
 .message-input-container {
     width: 100%;
     text-align: center;
-    border-top: 1px solid rgb(230,230,230);
+    position: fixed;
+    bottom: 0px;
 }
 
 .message-input-container > form {
     display: flex;
     padding: 10px 5px 10px;
     align-items: center;
-    margin-left: 40%;
+    margin-left: 65%;
 }
 
 .message-input {
@@ -98,4 +103,9 @@
 
 .message-list > li:nth-child(odd) {
     background-color: #fff;
+}
+
+.message-list-container {
+    margin-top: 50px;
+    width: 100vw;
 }

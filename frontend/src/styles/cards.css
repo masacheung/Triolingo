@@ -26,6 +26,10 @@
     align-items: center;
     overflow: hidden;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+    margin-top: 3px;
 }
 
 .cards-index-header > h1 {
@@ -44,6 +48,7 @@
     justify-content: space-evenly;
     padding: 30px 0px;
     margin: 1em 1em;
+    margin-top: 60px;
 }                                                        
 
 .card-container {

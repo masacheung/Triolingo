@@ -19,7 +19,7 @@ class Message extends React.Component{
         this.props.fetchMessages();
         this.interval = setInterval(() => {
             this.refresh()
-        }, 2500)
+        }, 1000)
     }
 
     refresh() {
