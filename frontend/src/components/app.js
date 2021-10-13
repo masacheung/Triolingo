@@ -11,6 +11,8 @@ import TeamPage from './main/team_page';
 import Main from './main';
 import MainNav from './mainnavbar/nav_container';
 
+import DictionaryApi from './dictionary_api/dictionary_api'
+
 import "../styles/reset.css";
 import "../styles/splash.css";
 import "../styles/navbar.css";
@@ -31,9 +33,11 @@ const App = () => (
             <ProtectedRoute path="/cards" component={Main} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
-
+    
             <Route exact path="/team" component={TeamPage}/>
             <AuthRoute exact path="/" component={SplashPage}/>
+
+            <Route exact path="/apitesting" component={DictionaryApi}/>
         </Switch>
 
     </div>
