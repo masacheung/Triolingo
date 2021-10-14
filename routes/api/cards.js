@@ -48,17 +48,20 @@ router.post('/',
 );
 
 // route for a user to update a card
-router.patch('/update',
+router.patch('/:id',
   passport.authenticate('jwt', { session: false}),
   (req, res) => {
 
-    Card.findById(req.user.card).then(card => {
+    Card.findById(req.body._id).then(card => {
       if(!card) {
         errors.card = 'No card is found with this ID';
         return res.status(404).json(errors);
       } else {
+        card.title = req.body.title;
         card.notes = req.body.notes;
-        card.save()
+        card.definition = req.body.definition;
+        card.synonyms = req.body.synonyms;
+        card.save().then((card) => res.json(card));
         return res.status(200).json(card)
       }
     })

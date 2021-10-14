@@ -57,7 +57,7 @@ export const addCard = (card) => dispatch => {
 
 export const updateCard = (card) => dispatch => {
     return CardUtil.updateCard(card)
-        .then(expense => (dispatch(receiveCard(card))
+        .then(card => (dispatch(receiveCard(card))
     ))
 };
 

@@ -13,7 +13,7 @@ export const addCard = card => {
 }
 
 export const updateCard = card => {
-  return axios.patch(`/api/cards/${card.id}`, card)
+  return axios.patch(`/api/cards/${card._id}`, card)
 }
 
 export const deleteCard = cardId => {
