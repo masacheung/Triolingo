@@ -12,6 +12,7 @@ class Nav extends React.Component {
         this.state = {
             title: "",
             definition: "",
+            synonyms: [],
             modal: false,
             decktitle: "",
             deckModal: false
