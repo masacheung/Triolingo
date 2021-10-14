@@ -16,6 +16,6 @@ export const updateCard = card => {
   return axios.patch(`/api/cards/${card.id}`, card)
 }
 
-export const deleteCard = card => {
-  return axios.delete(`api/cards/${card.id}`, card)
+export const deleteCard = cardId => {
+  return axios.delete(`api/cards/${cardId}`)
 }

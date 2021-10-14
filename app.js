@@ -10,22 +10,25 @@ const Card = require('./models/Card');
 const Deck = require('./models/Deck');
 const app = express();
 const cors = require('cors');
+let cors_proxy = require('cors-anywhere');
+// const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
 // cors configuration for api calls
 // ---------------------------------
-// const { createProxyMiddleware } = require('http-proxy-middleware');
 // app.use('/api', createProxyMiddleware({ target: 'http://www.example.org', changeOrigin: true }));
 
-const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
-}
-app.use(cors(corsOptions));
+
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true,
+}));
+
+
 
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST"); 
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -57,6 +60,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 const port = process.env.PORT || 5000;
+const host = process.env.HOST || '0.0.0.0';
 
 app.use("/api/users", users);
 app.use("/api/cards", cards);
@@ -65,3 +69,10 @@ app.use("/api/messages", messages);
 
 
 app.listen(port, () => {console.log(`Listening on port ${port}`)})
+// cors_proxy.createServer({
+//     originWhitelist: [], // Allow all origins
+//     requireHeader: ['origin', 'x-requested-with'],
+//     removeHeaders: ['cookie', 'cookie2']
+// }).listen(port, host, function() {
+//     console.log('Running CORS Anywhere on ' + host + ':' + port);
+// });

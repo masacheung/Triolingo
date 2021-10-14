@@ -1,4 +1,5 @@
 import React from 'react';
+import MessagesList from './message_list';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -18,7 +19,7 @@ class Message extends React.Component{
         this.props.fetchMessages();
         this.interval = setInterval(() => {
             this.refresh()
-        }, 2500)
+        }, 1000)
     }
 
     refresh() {
@@ -45,16 +46,16 @@ class Message extends React.Component{
         return (
             <div className="message-container">
                 <div className="message-index-header">
-                    <h1 classNama="message-header">
-                        User Messages
+                    <h1 className="message-header">
+                        Discussion Board
                     </h1>
                 </div>
                 <div className="message-list-container">
-
+                    <MessagesList messages={this.props.messages} fetchMessages={this.props.fetchMessages}/>
                 </div>
                 <div className="message-input-container">
                     <form onSubmit={this.handleSubmit}>
-                        <input className="message-input" type="text" placeholder="enter message" onChange={this.update} value={this.state.content}/>
+                        <input className="message-input" type="text" placeholder="Enter Message" onChange={this.update} value={this.state.content}/>
                         <button type="submit">
                             <FontAwesomeIcon icon={faPaperPlane} className="message-submit-button"/>
                         </button>

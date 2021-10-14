@@ -9,7 +9,7 @@ const CardsIndexList = props => {
 
         return (
             <div className="card-container">
-                <Card card={card}/>
+                <Card card={card} deleteCard={props.deleteCard}/>
             </div>        
         )
     });

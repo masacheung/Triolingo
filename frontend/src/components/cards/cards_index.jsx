@@ -8,14 +8,14 @@ class CardsIndex extends React.Component{
 
     componentDidMount() {
         this.props.fetchCards();
+        this.interval = setInterval(() => {
+            this.refresh()
+        }, 1000)
     }
 
-    // componentDidUpdate(){
-    //     this.props.fetchCards();
-    // }
-    // componentDidUpdate(prevProps){
-    //     if(prevProps.cards !== this.props.cards) this.props.fetchCards();
-    // }
+    refresh() {
+        this.props.fetchCards();
+    }
 
     render() {
         let cards = [];
@@ -30,7 +30,7 @@ class CardsIndex extends React.Component{
                 </div>
 
                 <div className="card-list-container">
-                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards}/>
+                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} deleteCard={this.props.deleteCard}/>
                 </div>
             </div>
         )

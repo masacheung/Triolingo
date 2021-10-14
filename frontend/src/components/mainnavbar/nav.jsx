@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle, faInbox, faPaperPlane} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faLayerGroup, faUserAlt, faQuestionCircle, faInbox, faComments} from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Modal from 'react-modal';
 
@@ -12,6 +12,7 @@ class Nav extends React.Component {
         this.state = {
             title: "",
             definition: "",
+            synonyms: [],
             modal: false,
             decktitle: "",
             deckModal: false
@@ -41,15 +42,15 @@ class Nav extends React.Component {
         this.setState({modal: false})
     }
 
-    handleCreateCard() {
-        let card = {
-            title: this.state.title,
-            definition: this.state.definition,
-        }
+    // handleCreateCard() {
+    //     let card = {
+    //         title: this.state.title,
+    //         definition: this.state.definition,
+    //     }
 
-        this.props.addCard(card);
-        this.handleCloseModal();
-    }
+    //     this.props.addCard(card);
+    //     this.handleCloseModal();
+    // }
 
     handleOpenDeckModal() {
         this.setState({deckModal: true})
@@ -63,7 +64,7 @@ class Nav extends React.Component {
         let card = {
             title: this.state.title,
             definition: this.state.definition,
-            user: this.state.user
+            synonyms: this.state.synonyms
         }
 
         this.props.addCard(card);
@@ -121,7 +122,7 @@ class Nav extends React.Component {
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
-                        <Link to="/messages"><FontAwesomeIcon icon={faPaperPlane}/> Messages</Link>
+                        <Link to="/messages"><FontAwesomeIcon icon={faComments}/> Discussion</Link>
                     </li>
                 </ul>
                 <div className="social">
@@ -135,6 +136,10 @@ class Nav extends React.Component {
                         
                         <label className="create-modal-label">Definition</label>
                         <input className="create-modal-input" type="text" placeholder="Flash Card Definition" value={this.state.definition} onChange={this.update('definition')}/>
+
+                        <label className="create-modal-label">Synonyms</label>
+                        <input className="create-modal-input" type="text" placeholder="Flash Card Synonyms" value={this.state.synonyms} onChange={this.update('synonyms')}/>
+
 
                         <div className="modal-buttons">
                             <button onClick={this.handleCloseModal} className="cancel">Cancel</button>

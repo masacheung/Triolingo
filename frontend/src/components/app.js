@@ -9,7 +9,6 @@ import SignupFormContainer from './session/signup_form_container';
 import SplashPage from './splash/splash_page';
 import TeamPage from './main/team_page';
 import Main from './main';
-import MainNav from './mainnavbar/nav_container';
 
 import DictionaryApi from './dictionary_api/dictionary_api'
 

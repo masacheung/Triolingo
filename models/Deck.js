@@ -3,14 +3,14 @@ const Schema = mongoose.Schema;
 
 const DeckSchema = new Schema(
   {
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users',
+    },
     cards: [{
         type: Schema.Types.ObjectId,
         ref: 'cards'        
     }],
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'users'        
-    },
     title: {
         type: String,
         required: true,

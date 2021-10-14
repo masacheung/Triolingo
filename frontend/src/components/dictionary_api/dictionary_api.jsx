@@ -10,21 +10,37 @@ const DictionaryApi = () => {
   const [meanings, setMeanings] = useState([]);
   const [category, setCategory] = useState("en");
 
-  // `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`
+  // const dictionaryApi = async () => {
+  //   const data = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
+  //   .then((response) => {response.json()})
+  //   .catch ((error) => {console.log(error)})
+  // };
+  
   const dictionaryApi = async () => {
-      const data = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
-      .then((data) => {
-        console.log(Object.values(data.data));
-      })
-      .catch ((error) => {console.log(error)})
-  };
+    try {
+      const data = await axios.get(
+        // http://localhost:5000
+        `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`, {
+          method: 'GET',
+          mode: 'no-cors',
+          crossorigin:true,
+          credentials: 'same-origin'
+        }
+        );
+        setMeanings(data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    
+    console.log(meanings);
+    
+    useEffect(() => {
+      dictionaryApi();
+    }, [word, category]);
 
-  useEffect(() => {
-    dictionaryApi();
-  }, [word, category]);
 
-
-  return (
+    return (
     <div
       className="App"
       style={{

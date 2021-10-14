@@ -35,26 +35,28 @@ router.get('/:id', (req, res) => {
 
 // route for a user to post a deck
 router.post('/',
-    // passport.authenticate('jwt', { session: true }),
-    (req, res) => {
-      console.log("reqreqreqreqreqreqreq")
-      console.log(req);
-      const { errors, isValid } = validateDeckInput(req.body);
-  
-      if (!isValid) {
-        return res.status(400).json(errors);
-      }
-      const newDeck = new Deck({
-        title: req.body.title,
-        user: req.user.id
-      });
-  
-      newDeck.save().then(deck => res.json(deck));
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    const { errors, isValid } = validateDeckInput(req.body);
+
+    if (!isValid) {
+      return res.status(400).json(errors);
     }
-  );
+
+    const newDeck = new Deck({
+      user: req.user.id,
+      title: req.body.title,
+    });
+
+    console.log(newDeck.user);
+    newDeck.save().then(deck => res.json(deck));
+  }
+);
 
   // deleting a deck
-router.delete('/:id', (req, res) => {
+router.delete('/:id', 
+  passport.authenticate('jwt', { session: true }),  
+  (req, res) => {
     Deck.deleteOne({_id: req.params.id}).then(
       () => {
         res.status(200).json({
