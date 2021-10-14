@@ -88,3 +88,25 @@
     bottom: 5px;
     margin-left: 10px;
 }
+
+.update-button {
+    background-color: #4C82E6;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    margin: 0px 5px 0px 5px;
+    height: 25px;
+    padding: 5px 10px 5px 12px;
+    font-family: "Soleil_Bold", Helvetica, Arial, Sans-serif;
+    font-weight: 50;
+    letter-spacing: 1.2px;
+    transition: .3s background-color ease-in-out;
+    position: absolute;
+    bottom: 70px;
+    margin-left: -40px;
+}
+
+.update-button:hover {
+    background-color: #fff;
+    color: black;
+}

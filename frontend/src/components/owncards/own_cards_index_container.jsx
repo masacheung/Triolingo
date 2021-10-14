@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import OwnCardsIndex from "./own_cards_index";
 
-import { fetchCards, fetchCard, addCard, deleteCard } from "../../actions/card_actions";
+import { fetchCards, fetchCard, addCard, updateCard } from "../../actions/card_actions";
 
 const mSTP = state => ({
     currentUser: state.session.user,
@@ -12,7 +12,7 @@ const mDTP = dispatch => ({
     fetchCards: () => dispatch(fetchCards()),
     fetchCard: cardId => dispatch(fetchCard(cardId)),
     addCard: card => dispatch(addCard(card)),
-    deleteCard: cardId => dispatch(deleteCard(cardId))
+    updateCard: card => dispatch(updateCard(card))
 })
 
 export default connect(mSTP, mDTP)(OwnCardsIndex);

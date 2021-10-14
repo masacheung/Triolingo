@@ -1,5 +1,5 @@
 import React from "react";
-import CardsIndexList from "../cards/cards_index_list";
+import OwnCardsIndexList from "./own_cards_index_list";
 
 class OwnCardsIndex extends React.Component{
     constructor(props) {
@@ -37,7 +37,7 @@ class OwnCardsIndex extends React.Component{
                 </div>
 
                 <div className="card-list-container">
-                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} deleteCard={this.props.deleteCard}/>
+                    <OwnCardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} updateCard={this.props.updateCard}/>
                 </div>
             </div>
         )
