@@ -10,7 +10,7 @@ const Card = require('./models/Card');
 const Deck = require('./models/Deck');
 const app = express();
 const cors = require('cors');
-let cors_proxy = require('cors-anywhere');
+// let cors_proxy = require('cors-anywhere');
 // const { createProxyMiddleware } = require('http-proxy-middleware');
 
 

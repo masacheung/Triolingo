@@ -23,11 +23,11 @@ const Header = ({
   }, 500);
 
   return (
-    <div className="header">
-      <span className="title">{word ? word : ""}</span>
-      <div className="inputs">
+    <div className="dictionary-header-container">
+      <span className="dictionary-header-title">{word ? word : ""}</span>
+      <div className="dictionary-header-inputs">
           <TextField
-            className="search"
+            className="dictionary-header-search"
             id="filled-basic"
             // value={word}
             label="Search a Word"
@@ -38,12 +38,12 @@ const Header = ({
             label="Language"
             value={category}
             onChange={(e) => handleChange(e)}
-            className="select-api-category"
+            className="dictionary-header-select-category"
           >
-            <option className="select-api-option" value="en">English</option>
-            <option className="select-api-option" value="ko">Korean</option>
-            <option className="select-api-option" value="ja">Japanese</option>
-            <option className="select-api-option" value="es">Spanish</option>
+            <option className="select-language-option" value="en">English</option>
+            <option className="select-language-option" value="ko">Korean</option>
+            <option className="select-language-option" value="ja">Japanese</option>
+            <option className="select-language-option" value="es">Spanish</option>
           </TextField>
       </div>
     </div>

@@ -12,6 +12,7 @@ import DeckShowContainer from "./Deck/deck_show_container";
 import MessagesContainer from "./message/messages_container";
 import OwnCardsIndexContainer from "./owncards/own_cards_index_container";
 
+import DictionaryApi from './dictionary_api/dictionary_api'
 
 const Main = () => {
     return( 
@@ -23,6 +24,7 @@ const Main = () => {
                 <ProtectedRoute path='/owncards' component={OwnCardsIndexContainer} />
                 <ProtectedRoute path="/decks" component={DecksIndexContainer} />
                 <ProtectedRoute path="/messages" component={MessagesContainer} />
+                <ProtectedRoute path="/dictionary" component={DictionaryApi} />
 
             </Switch>
         </div>

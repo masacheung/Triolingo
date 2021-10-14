@@ -3,46 +3,39 @@ import axios from "axios";
 import Header from "./Header";
 import { useEffect, useState } from "react";
 import Definitions from "./Definitions";
-
+import { green } from "@material-ui/core/colors";
 
 const DictionaryApi = () => {
   const [word, setWord] = useState("");
   const [meanings, setMeanings] = useState([]);
   const [category, setCategory] = useState("en");
 
-  // const dictionaryApi = async () => {
-  //   const data = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`)
-  //   .then((response) => {response.json()})
-  //   .catch ((error) => {console.log(error)})
-  // };
-  
+ 
   const dictionaryApi = async () => {
     try {
-      const data = await axios.get(
-        // http://localhost:5000
-        `https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`, {
-          method: 'GET',
-          mode: 'no-cors',
-          crossorigin:true,
-          credentials: 'same-origin'
-        }
-        );
-        setMeanings(data.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+      const data = await axios({
+        url: `https://sheltered-savannah-55294.herokuapp.com/https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`,
+        method: 'GET'
+      })
+      console.log("object.entries:");
+      console.log(Object.entries(data.data));
+      setMeanings(data.data);
+      } 
+    catch (error) {
+      console.log(error);
+    }
+  };
     
-    console.log(meanings);
+  console.log(meanings);
     
-    useEffect(() => {
-      dictionaryApi();
-    }, [word, category]);
+  useEffect(() => {
+    dictionaryApi();
+  }, [word, category]);
 
 
-    return (
+  return (
     <div
-      className="App"
+      className="dictionary-page"
       style={{
         height: "120vh",
         transition: "all 0.3s linear",
@@ -58,11 +51,12 @@ const DictionaryApi = () => {
         }}
         >
         <div
-          style={{ position: "relative", top: 0, right: 15, paddingTop: 10 }}
+          style={{ position: "relative", top: 0, right: 0, paddingTop: 10 }}
         >
         
         </div>
         <Header
+          className='dictionary-header'
           setCategory={setCategory}
           setWord={setWord}
           category={category}
@@ -71,6 +65,7 @@ const DictionaryApi = () => {
         />
         {meanings && (
           <Definitions
+            className='dictionary-meanings'
             meanings={meanings}
             word={word}
             category={category}
@@ -80,6 +75,5 @@ const DictionaryApi = () => {
     </div>
   );
 }
-
 
 export default DictionaryApi;
