@@ -6,6 +6,7 @@ import { Route } from 'react-router';
 import NavbarContainer from "./navbar/navbar_container";
 import LoginFormContainer from './session/login_form.container';
 import SignupFormContainer from './session/signup_form_container';
+import DeckShowContainer from './Deck/deck_show_container';
 import SplashPage from './splash/splash_page';
 import TeamPage from './main/team_page';
 import Main from './main';
@@ -43,6 +44,8 @@ const App = () => (
     
             <Route exact path="/team" component={TeamPage}/>
             <AuthRoute exact path="/" component={SplashPage}/>
+
+            <ProtectedRoute path="/decks/:deckId" component={DeckShowContainer}/>
 
         </Switch>
 

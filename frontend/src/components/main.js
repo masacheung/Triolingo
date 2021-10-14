@@ -25,6 +25,7 @@ const Main = () => {
                 <ProtectedRoute path="/decks" component={DecksIndexContainer} />
                 <ProtectedRoute path="/messages" component={MessagesContainer} />
                 <ProtectedRoute path="/dictionary" component={DictionaryApi} />
+            {/* <ProtectedRoute path="/decks/:deckId" component={DeckShowContainer}/> */}
 
             </Switch>
         </div>
