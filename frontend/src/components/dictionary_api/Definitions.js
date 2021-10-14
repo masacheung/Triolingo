@@ -2,18 +2,16 @@ import React from "react";
 
 const Definitions = ({ meanings, word, category }) => {
   return (
-    <div className="meanings">
-      {/* audio---------------------------- */}
+    <div className="dictionary-meanings-container">
       {meanings[0] && word && category === "en" && (
         <audio
-          style={{ backgroundColor: "#fff", borderRadius: 10 }}
+          style={{ backgroundColor: "#fff", borderRadius: 12 }}
           src={meanings[0].phonetics[0] && meanings[0].phonetics[0].audio}
           controls
         >
           Your browser does not support the audio element.
         </audio>
       )}
-      {/* audio---------------------------- */}
 
       {word === "" ? (
         <span className="subTitle">Search a word on the search bar</span>
@@ -27,11 +25,13 @@ const Definitions = ({ meanings, word, category }) => {
                 {def.example && (
                   <span>
                     <b>Example :</b> {def.example}
+                    <br />
                   </span>
                 )}
                 {def.synonyms && (
                   <span>
                     <b>Synonyms :</b> {def.synonyms.map((s) => `${s}, `)}
+                    <br />
                   </span>
                 )}
               </div>
