@@ -34,27 +34,7 @@ const DictionaryApi = () => {
 
 
   return (
-    <div
-      className="dictionary-page"
-      style={{
-        height: "120vh",
-        transition: "all 0.3s linear",
-      }}
-    >
-      <Container
-        maxWidth="md"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          height: "120vh",
-          justifyContent: "space-evenly",
-        }}
-        >
-        <div
-          style={{ position: "relative", top: 0, right: 0, paddingTop: 10 }}
-        >
-        
-        </div>
+    <div className="dictionary-page">
         <Header
           className='dictionary-header'
           setCategory={setCategory}
@@ -71,7 +51,6 @@ const DictionaryApi = () => {
             category={category}
           />
         )}
-      </Container>
     </div>
   );
 }
