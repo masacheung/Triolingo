@@ -42,15 +42,15 @@ class Nav extends React.Component {
         this.setState({modal: false})
     }
 
-    handleCreateCard() {
-        let card = {
-            title: this.state.title,
-            definition: this.state.definition,
-        }
+    // handleCreateCard() {
+    //     let card = {
+    //         title: this.state.title,
+    //         definition: this.state.definition,
+    //     }
 
-        this.props.addCard(card);
-        this.handleCloseModal();
-    }
+    //     this.props.addCard(card);
+    //     this.handleCloseModal();
+    // }
 
     handleOpenDeckModal() {
         this.setState({deckModal: true})
@@ -64,7 +64,7 @@ class Nav extends React.Component {
         let card = {
             title: this.state.title,
             definition: this.state.definition,
-            user: this.state.user
+            synonyms: this.state.synonyms
         }
 
         this.props.addCard(card);
@@ -136,6 +136,10 @@ class Nav extends React.Component {
                         
                         <label className="create-modal-label">Definition</label>
                         <input className="create-modal-input" type="text" placeholder="Flash Card Definition" value={this.state.definition} onChange={this.update('definition')}/>
+
+                        <label className="create-modal-label">Synonyms</label>
+                        <input className="create-modal-input" type="text" placeholder="Flash Card Synonyms" value={this.state.synonyms} onChange={this.update('synonyms')}/>
+
 
                         <div className="modal-buttons">
                             <button onClick={this.handleCloseModal} className="cancel">Cancel</button>
