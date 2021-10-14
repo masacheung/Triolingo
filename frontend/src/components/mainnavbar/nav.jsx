@@ -118,7 +118,7 @@ class Nav extends React.Component {
                     </li>
                     <br className="main-nav-gap"/>
                     <li>
-                        <Link to="/cards"><FontAwesomeIcon icon={faLayerGroup}/> Own Cards</Link>
+                        <Link to="/owncards"><FontAwesomeIcon icon={faLayerGroup}/> Own Cards</Link>
                     </li>
                     <br className="main-nav-gap"/>
                     <li>

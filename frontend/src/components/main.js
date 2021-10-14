@@ -10,6 +10,7 @@ import MainNav from "./mainnavbar/nav_container";
 import DecksIndexContainer from "./Deck/decks_index_container";
 import DeckShowContainer from "./Deck/deck_show_container";
 import MessagesContainer from "./message/messages_container";
+import OwnCardsIndexContainer from "./owncards/own_cards_index_container";
 
 
 const Main = () => {
@@ -19,6 +20,7 @@ const Main = () => {
             <Switch>
                 <ProtectedRoute path='/main' component={InstructionPage}/>
                 <ProtectedRoute path='/cards' component={CardsIndexContainer} />
+                <ProtectedRoute path='/owncards' component={OwnCardsIndexContainer} />
                 <ProtectedRoute path="/decks" component={DecksIndexContainer} />
                 <ProtectedRoute path="/messages" component={MessagesContainer} />
 
