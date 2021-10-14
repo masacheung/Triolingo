@@ -30,7 +30,7 @@ class CardsIndex extends React.Component{
                 </div>
 
                 <div className="card-list-container">
-                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards}/>
+                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} deleteCard={this.props.deleteCard}/>
                 </div>
             </div>
         )

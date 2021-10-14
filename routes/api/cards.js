@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
 });
 // route for a user to post a card
 router.post('/',
-    // passport.authenticate('jwt', { session: true }),
+    // passport.authenticate('jwt', { session: false }),
     (req, res) => {
       const { errors, isValid } = validateCardInput(req.body);
   

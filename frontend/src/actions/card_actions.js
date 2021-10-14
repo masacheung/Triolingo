@@ -63,6 +63,6 @@ export const updateCard = (card) => dispatch => {
 
 export const deleteCard = (cardId) => dispatch => {
     return CardUtil.deleteCard(cardId)
-        .then(card => (dispatch(removeCard(card.id))
+        .then(() => (dispatch(removeCard(cardId))
     ))
 };
