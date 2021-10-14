@@ -1,15 +1,15 @@
 import React from "react";
 
 const Definitions = ({ meanings, word, category }) => {
+  
   return (
     <div className="dictionary-meanings-container">
-      {word === "" ? (
-        <span className="subTitle">Search a word on the search bar</span>
-      ) : (
-        meanings.map((mean) =>
-          mean.meanings.map((item) =>
-            item.definitions.map((def) => (
-              <div className="singleMean">
+      {word === "" ? (<span className="subTitle">Search a word on the search bar</span>) : (
+        meanings.map((mean, i) =>
+        ( i < 1 ? (
+          mean.meanings.map((item, i) =>
+            item.definitions.map((def, i) => (
+              (  i < 2 ? (<div className="singleMean">
                 <div className="definition">Definition: {def.definition}</div>
                 {def.example && (
                   <span>
@@ -23,9 +23,9 @@ const Definitions = ({ meanings, word, category }) => {
                     <br />
                   </span>
                 )}
-              </div>
+              </div>) : "")
             ))
-          )
+          )) : "")
         )
       )}
       {meanings[0] && word && category === "en" && (

@@ -15,7 +15,6 @@ const Header = ({
     setCategory(e.target.value);
     setWord("");
     setMeanings([]);
-    console.log(e.target.value)
   };
 
     const handleText = debounce((text) => {

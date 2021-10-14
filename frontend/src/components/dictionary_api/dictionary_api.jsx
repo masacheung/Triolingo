@@ -17,16 +17,12 @@ const DictionaryApi = () => {
         url: `https://sheltered-savannah-55294.herokuapp.com/https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`,
         method: 'GET'
       })
-      console.log("object.entries:");
-      console.log(Object.entries(data.data));
       setMeanings(data.data);
       } 
     catch (error) {
       console.log(error);
     }
   };
-    
-  console.log(meanings);
     
   useEffect(() => {
     dictionaryApi();
