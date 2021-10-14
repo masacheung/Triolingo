@@ -6,7 +6,7 @@ import { fetchCards, addCard } from "../../actions/card_actions";
 
 const mSTP = (state, ownProps) => ({
     decks: state.decks,
-    decks: Object.values(Object.assign({},state.decks.data)),
+    // decks: Object.values(Object.assign({},state.decks.data)),
     // decks: Object.assign({}, state.decks.data),
     cards: Object.values(Object.assign({},state.cards.data)),
     deck: state.decks[ownProps.match.params.id]

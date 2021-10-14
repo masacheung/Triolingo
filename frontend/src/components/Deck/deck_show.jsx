@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 // import CardsIndexList from "../cards/cards_index_list";
 
@@ -6,13 +7,26 @@ class DeckShow extends React.Component{
     constructor(props) {
         super(props)
 
+        // this.state = {
+        //     deck: []
+        // }
     }
 
     componentDidMount() {
-        // this.propss.fetchDeck(this.props.match.params.id);
-        this.props.fetchDecks();
+        this.props.fetchDeck(this.props.match.params._id);
+        // this.renderDeck();
+        // this.props.fetchDecks();
         this.props.fetchCards();
     }
+
+    // renderDeck = () => {
+    //     axios.get('/:id')
+    //         .then( res => {
+    //             const data = res.data;
+    //             this.setState({ deck: data})
+    //         })
+    // }
+
     render() {
         let decks = [];
         if (this.props.decks.data) {
@@ -27,7 +41,6 @@ class DeckShow extends React.Component{
             <div>
                 {deckshow}
                 <div>
-                        {/* cards under deck */}
                 </div>
             </div>
         )

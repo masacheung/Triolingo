@@ -37,6 +37,7 @@ const App = () => (
             <ProtectedRoute path="/cards" component={Main} />
             <ProtectedRoute path="/decks" component={Main} />
             <ProtectedRoute path="/messages" component={Main} />
+            <ProtectedRoute path="/deckshow" component={Main} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
     
