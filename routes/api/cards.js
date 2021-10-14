@@ -6,7 +6,6 @@ const Card = require('../../models/Card');
 const User = require('../../models/User');
 const validateCardInput = require('../../validation/cards');
 
-
 // route for all the cards
 router.get('/', (req, res) => {
     Card.find()
@@ -14,14 +13,6 @@ router.get('/', (req, res) => {
         .then(cards => res.json(cards))
         .catch(err => res.status(404).json({ nocardsfound: "No cards found"}));
 })
-
-// route for list of cards created by a specific user
-// router.get('/users/:user_id', (req, res) => {
-//     Card.find({user: req.params.user_id})
-//         .then(cards => res.json(cards))
-//         .catch(err => 
-//             res.status(404).json({ nocardsfound: 'No cards found from this user'}))
-// })
 
 // route for single card
 router.get('/:id', (req, res) => {
@@ -33,42 +24,64 @@ router.get('/:id', (req, res) => {
 });
 // route for a user to post a card
 router.post('/',
-    // passport.authenticate('jwt', { session: false }),
-    (req, res) => {
-      const { errors, isValid } = validateCardInput(req.body);
-  
-      if (!isValid) {
-        return res.status(400).json(errors);
-      }
-  
-      const newCard = new Card({
-        title: req.body.title,
-        definition: req.body.definition,
-        synonyms: req.body.synonyms,
-        audio: req.body.audio,
-        notes: req.body.notes,
-        category: req.body.category
-      });
-  
-      newCard.save().then(card => res.json(card));
+  passport.authenticate('jwt', { session: false }),
+  (req, res) => {
+    const { errors, isValid } = validateCardInput(req.body);
+
+    if (!isValid) {
+      return res.status(400).json(errors);
     }
-  );
+
+    const newCard = new Card({
+      user: req.user.id,
+      title: req.body.title,
+      definition: req.body.definition,
+      synonyms: req.body.synonyms,
+      audio: req.body.audio,
+      notes: req.body.notes,
+      category: req.body.category
+    });
+
+    console.log(newCard.user);
+    newCard.save().then(card => res.json(card));
+  }
+);
+
+// route for a user to update a card
+router.patch('/update',
+  passport.authenticate('jwt', { session: false}),
+  (req, res) => {
+
+    Card.findById(req.user.card).then(card => {
+      if(!card) {
+        errors.card = 'No card is found with this ID';
+        return res.status(404).json(errors);
+      } else {
+        card.notes = req.body.notes;
+        card.save()
+        return res.status(200).json(card)
+      }
+    })
+  }
+)
 
     // deleting a card
-router.delete('/:id', (req, res) => {
-    Card.deleteOne({_id: req.params.id}).then(
-      () => {
-        res.status(200).json({
-          message: "Card is deleted!"
-        });
-      }
-    ).catch(
-      (error) => {
-        res.status(400).json({
-          error: error
-        })
-      }
-    )
+router.delete('/:id', 
+  passport.authenticate('jwt', { session: true }),
+  (req, res) => {
+  Card.deleteOne({_id: req.params.id}).then(
+    () => {
+      res.status(200).json({
+        message: "Card is deleted!"
+      });
+    }
+  ).catch(
+    (error) => {
+      res.status(400).json({
+        error: error
+      })
+    }
+  )
 });
 
   module.exports = router;
