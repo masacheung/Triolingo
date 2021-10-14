@@ -42,16 +42,6 @@ class Nav extends React.Component {
         this.setState({modal: false})
     }
 
-    // handleCreateCard() {
-    //     let card = {
-    //         title: this.state.title,
-    //         definition: this.state.definition,
-    //     }
-
-    //     this.props.addCard(card);
-    //     this.handleCloseModal();
-    // }
-
     handleOpenDeckModal() {
         this.setState({deckModal: true})
     }
@@ -68,6 +58,7 @@ class Nav extends React.Component {
         }
 
         this.props.addCard(card);
+        this.setState({title: "", definition: "", synonyms: ""})
         this.handleCloseModal();
     }
 
@@ -80,6 +71,7 @@ class Nav extends React.Component {
         console.log(deck);
 
         this.props.addDeck(deck);
+        this.setState({decktitle: ""})
         this.handleCloseDeckModal();
     }
 
