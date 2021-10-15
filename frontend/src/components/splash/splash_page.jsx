@@ -50,21 +50,6 @@ const SplashPage = () => {
 
                 <div className="splash-info">
                     <h3>
-                        Backend Lead
-                    </h3>
-                    <ul>
-                        <li>
-                            Danny Park
-                        </li>
-                        <li>
-                        <a href="https://github.com/dannyjwpark">Github</a>
-                        </li>
-                        <a href="https://www.linkedin.com/in/jwp007/">LinkedIn</a>
-                    </ul>
-                </div>
-
-                <div className="splash-info">
-                    <h3>
                     Frontend Lead
                     </h3>
                     <ul>
@@ -77,7 +62,24 @@ const SplashPage = () => {
                         <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/">LinkedIn</a>
                     </ul>
                 </div>
+
+                <div className="splash-info">
+                    <h3>
+                        Backend Lead
+                    </h3>
+                    <ul>
+                        <li>
+                            Danny Park
+                        </li>
+                        <li>
+                        <a href="https://github.com/dannyjwpark">Github</a>
+                        </li>
+                        <a href="https://www.linkedin.com/in/jwp007/">LinkedIn</a>
+                    </ul>
+                </div>
             </div>
+
+
             <div className="copyright">
                     Copyright © 2021 Triolingo
             </div>
