@@ -1,39 +1,43 @@
 import React from "react";
-
-import CardsIndexList from "../cards/cards_index_list";
-
+import DeckCardsShowList from "./deck_cards_show"
 class DeckShow extends React.Component{
   constructor(props) {
     super(props)
   }
 
   componentDidMount() {
+    this.props.fetchDecks();
     this.props.fetchDeck(this.props.currentDeckId);
     this.props.fetchCards();
   }
   render() {
-    let decks = [];
-    if (this.props.decks.data) {
-      decks = Object.values(this.props.decks.data)
-    }
+    let curDeck = null;
+    this.props.decks.data.forEach((deck) => {
+      if (deck._id === this.props.deckId.toString()){
+        curDeck = deck;
+      }
+    })
 
-    let cards = [];
-    if(this.props.cards.data) {
-      cards = Object.values(this.props.cards)
-    }
-    
+    let curCard = [];
+
+    const cards = this.props.cards.data;
+
+    cards.forEach(card => {
+      curDeck.cards.forEach(deckCard => {
+        if(card._id == deckCard){
+          curCard.push(card);
+        }
+      })
+    })
 
     return(
-      <div>
-        <h1>deckshowpage(temporary)</h1>
-        <div>
-            {decks.map( deck => (
-              <h2 className="deck-show-title">{deck.title}</h2>
-          ))}
+      <div className="decks-index-container">
+        <div className="decks-index-header">
+          <h1 className="decks-header">{curDeck.title}</h1>
         </div>
 
-        <div>
-          {/* <CardsIndexList /> */}
+        <div className="card-list-container">
+          <DeckCardsShowList cards={curCard}/>
         </div>
       </div>
     )

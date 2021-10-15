@@ -22,10 +22,11 @@ const Main = () => {
                 <ProtectedRoute path='/main' component={InstructionPage}/>
                 <ProtectedRoute path='/cards' component={CardsIndexContainer} />
                 <ProtectedRoute path='/owncards' component={OwnCardsIndexContainer} />
-                <ProtectedRoute path="/decks" component={DecksIndexContainer} />
+                <ProtectedRoute exact path="/decks" component={DecksIndexContainer} />
+                <ProtectedRoute path="/decks/:deckId" component={DeckShowContainer}/>
                 <ProtectedRoute path="/messages" component={MessagesContainer} />
                 <ProtectedRoute path="/dictionary" component={DictionaryApi} />
-            
+
 
             </Switch>
         </div>

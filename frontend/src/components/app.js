@@ -36,6 +36,7 @@ const App = () => (
             <ProtectedRoute path="/main" component={Main}/>
             <ProtectedRoute path="/cards" component={Main} />
             <ProtectedRoute exact path="/decks" component={Main} />
+            <ProtectedRoute path="/decks/:deckId" component={Main}/>
             <ProtectedRoute path="/messages" component={Main} />
             <ProtectedRoute path="/owncards" component={Main} />
             <ProtectedRoute path="/dictionary" component={Main}/>
@@ -44,8 +45,6 @@ const App = () => (
     
             <Route exact path="/team" component={TeamPage}/>
             <AuthRoute exact path="/" component={SplashPage}/>
-
-            <ProtectedRoute path="/decks/:deckId" component={DeckShowContainer}/>
 
         </Switch>
 
