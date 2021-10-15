@@ -5,7 +5,7 @@ import { addCard } from "../../util/card_api_util";
 const Definitions = ({ meanings, word, category }) => {
   let createWord = "";
   let createdef = "";
-  let createSyn = [];
+  let createSyn;
   let createsrc = "";
   let careatecategory = "";
   return (
@@ -19,7 +19,7 @@ const Definitions = ({ meanings, word, category }) => {
                 (  i < 2 ? (<div className="singleMean">
                   {createWord = word}
                   {createdef = def.definition}
-                  {createSyn.push(def.synonyms)}
+                  {createSyn = def.synonyms}
                   <div className="definition">Definition: {def.definition}</div>
                   {def.example && (
                     <span>
