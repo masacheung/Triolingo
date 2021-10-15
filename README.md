@@ -20,7 +20,7 @@ Triolingo is the best flash card system with built-in spaced repetition function
 ---
 
 ## Overview
-<a href="https://triolingo-mern.herokuapp.com/#/">Triolingo</a> is a single-page flash card app that features a dictinary, definition, example, synonym and audio pronunciation.
+<a href="https://triolingo-mern.herokuapp.com/#/">Triolingo</a> is a single-page flash card app that features a dictinary, definition, example, synonym, audio pronunciation and discussion board.
 
 ## Technologies
 1. MongoDB
@@ -52,7 +52,7 @@ Users can search vocabulary with up to four different languages, English, Korean
 ### Discussion Board
 ![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/discussion.png)
 
-Having a discussion board. Users can ask question and discussion the study process.
+Having a discussion boards which create a more collaborative learning environment. Users can ask question and discussion the study process.
 
 ---
 
