@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { addCard } from "../../util/card_api_util";
 
 const Definitions = ({ meanings, word, category }) => {
@@ -47,7 +48,7 @@ const Definitions = ({ meanings, word, category }) => {
       <div className="api-create-form">
         {word === "" ? "" : 
         (<div>
-          <button className="api-create-button" onClick={() => addCard({title: createWord, definition: createdef, audio: createsrc})}>Create Flash Card</button>
+          <button className="api-create-button" onClick={() => addCard({title: createWord, definition: createdef, audio: createsrc})}><Link to="/owncards">Create Flash Card</Link></button>
         </div>)
         }
       </div>
