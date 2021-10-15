@@ -90,11 +90,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 14px;
+    font-size: 20px;
     width: 100%;
     height: range(60px, 100px);
     padding: 10px 10px 15px;
     background-color: #F8F8FF;
+    margin-left: 2%;
 }
 
 .message-item > .message-item-user {
