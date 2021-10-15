@@ -28,6 +28,7 @@ const Definitions = ({ meanings, word, category }) => {
                   )}
                   {def.synonyms && (
                     <span>
+                      {createSyn = def.synonyms}
                       <b>Synonyms :</b> {def.synonyms.map((s) => `${s}, `)}
                       <br />
                     </span>
@@ -48,7 +49,7 @@ const Definitions = ({ meanings, word, category }) => {
       <div className="api-create-form">
         {word === "" ? "" : 
         (<div>
-          <button className="api-create-button" onClick={() => addCard({title: createWord, definition: createdef, audio: createsrc})}><Link to="/owncards">Create Flash Card</Link></button>
+          <button className="api-create-button" onClick={() => addCard({title: createWord, definition: createdef, audio: createsrc, synonyms: createSyn})}><Link to="/owncards">Create Flash Card</Link></button>
         </div>)
         }
       </div>
