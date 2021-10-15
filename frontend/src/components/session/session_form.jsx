@@ -29,8 +29,8 @@ class SessionForm extends React.Component {
     renderErrors() {
         return(
             <div>
-                {Object.keys(this.state.errors).map((err, i) => (
-                    <p key={`error- ${i}`}>{this.state.errors[err]}</p>
+                {Object.values(this.props.errors).map((err, i) => (
+                    <p key={`error- ${i}`}>{err}</p>
                 ))}
             </div>
         )
@@ -50,6 +50,7 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
         return(
             <div className="session-form-background">
                 <div className="session-form-container">
@@ -61,7 +62,6 @@ class SessionForm extends React.Component {
                             <h1 className="logo-link" className="logo-link">Triolingo</h1>
                             <div className="errors">{this.renderErrors()}</div>
                         </div>
-
                         <form className="session-form" onSubmit={this.handleSubmit}>
                             <ul>
                                 <li>

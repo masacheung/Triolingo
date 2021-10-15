@@ -7,7 +7,7 @@
     min-width: 100%;
 }
 
-.errors > ul{
+.errors{
     padding-left: 0px;
     list-style-type: none;
     color: red;
