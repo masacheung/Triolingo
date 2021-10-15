@@ -19,9 +19,9 @@ module.exports = function validateCardInput(data) {
         errors.title = 'Title field is required'
     }
 
-    if (!Validator.isAlphanumeric(data.title)) {
-        errors.title = 'Title cannot contain a special character (i.e. !?=~...)'
-    }
+    // if (!Validator.isAlphanumeric(data.title)) {
+    //     errors.title = 'Title cannot contain a special character (i.e. !?=~...)'
+    // }
     
     if (Validator.isEmpty(data.definition)) {
         errors.definition = 'Definition field is required'
