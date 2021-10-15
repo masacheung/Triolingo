@@ -7,6 +7,7 @@ const Definitions = ({ meanings, word, category }) => {
   let createdef = "";
   let createSyn = [];
   let createsrc = "";
+  let careatecategory = "";
   return (
     <div className="api-container">
       <div className="dictionary-meanings-container">
@@ -41,6 +42,7 @@ const Definitions = ({ meanings, word, category }) => {
         {meanings[0] && word && category === "en" && (
           <audio className="dictionary-audio" src={meanings[0].phonetics[0] && meanings[0].phonetics[0].audio} controls>
             {createsrc = meanings[0].phonetics[0] && meanings[0].phonetics[0].audio}
+            {careatecategory = category}
             Your browser does not support the audio element.
           </audio>
         )}
@@ -49,7 +51,7 @@ const Definitions = ({ meanings, word, category }) => {
       <div className="api-create-form">
         {word === "" ? "" : 
         (<div>
-          <button className="api-create-button" onClick={() => addCard({title: createWord, definition: createdef, audio: createsrc, synonyms: createSyn})}><Link to="/owncards">Create Flash Card</Link></button>
+          <button className="api-create-button" onClick={() => addCard({category: careatecategory, title: createWord, definition: createdef, audio: createsrc, synonyms: createSyn})}><Link to="/owncards">Create Flash Card</Link></button>
         </div>)
         }
       </div>
