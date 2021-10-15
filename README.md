@@ -1,8 +1,14 @@
 # Triolingo
 
+Your Best Education App!!
+Triolingo is the best flash card system with built-in spaced repetition function to help you retain your knowledge.
+
+![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/splash.png)
 ## Demo
 
 <a href="https://triolingo-mern.herokuapp.com/#/">Try Triolingo </a> via the live demo login.
+
+---
 
 ## Table of Contents
 1. [Overview](https://github.com/masacheung/Triolingo#overview)
@@ -11,12 +17,10 @@
 4. [In-progress & Planned]
 5. [Project Team](https://github.com/masacheung/Triolingo#project-team)
 
-Your Best Education App!!
-A flash card system with built-in spaced repetition function to help you retain your knowledge.
-
-# About The Project
+---
 
 ## Overview
+<a href="https://triolingo-mern.herokuapp.com/#/">Triolingo</a> is a single-page flash card app that features a dictinary, definition, example, synonym and audio pronunciation.
 
 ## Technologies
 1. MongoDB
@@ -24,6 +28,30 @@ A flash card system with built-in spaced repetition function to help you retain 
 3. React
 4. NodeJS
 5. CSS
+
+Triolingo's Dictionary is built with Dictionary API. Modifications to the Dictionary API CSS styling and able to create flash card after get the information.
+
+## Features
+
+---
+
+### Flash Cards
+![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/card.gif)
+
+Users can view all the users's flash cards in the All Cards pages. Users can also click the flash card audio player button to hear the pronunciation.
+
+---
+
+### Dictionary
+![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/dictionary.gif)
+
+Users can search vocabulary with up to four different languages, English, Korean, Japanese and Spanish. Dictionary will generated definition, example, synonym and audio pronunciation. Users can also create the flash card to store the information for feature use.
+
+---
+
+![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/update_card.gif)
+
+Users can edit their own cards.
 
 ## Project Team
 
