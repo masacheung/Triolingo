@@ -1,6 +1,6 @@
 # Triolingo
 
-Your Best Education App!!
+Your Best Education App!!<br/>
 Triolingo is the best flash card system with built-in spaced repetition function to help you retain your knowledge.
 
 ![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/splash.png)
@@ -11,7 +11,7 @@ Triolingo is the best flash card system with built-in spaced repetition function
 ---
 
 ## Table of Contents
-1. [Overview](https://github.com/masacheung/Triolingo#overview)
+1. [About The Project](https://github.com/masacheung/Triolingo#about-the-project)
 2. [Technologies](https://github.com/masacheung/Triolingo#technologies)
 3. [Features](https://github.com/masacheung/Triolingo#features)
 4. [In-progress & Planned]
@@ -19,7 +19,7 @@ Triolingo is the best flash card system with built-in spaced repetition function
 
 ---
 
-## Overview
+## About The Project
 <a href="https://triolingo-mern.herokuapp.com/#/">Triolingo</a> is a single-page flash card app that features a dictinary, definition, example, synonym, audio pronunciation and discussion board.
 
 ## Technologies
