@@ -14,8 +14,7 @@ Triolingo is the best flash card system with built-in spaced repetition function
 1. [About The Project](https://github.com/masacheung/Triolingo#about-the-project)
 2. [Technologies](https://github.com/masacheung/Triolingo#technologies)
 3. [Features](https://github.com/masacheung/Triolingo#features)
-4. [In-progress & Planned]
-5. [Project Team](https://github.com/masacheung/Triolingo#project-team)
+4. [Project Team](https://github.com/masacheung/Triolingo#project-team)
 
 ---
 
