@@ -16,9 +16,9 @@ const CardSchema = new Schema(
       type: String,
       required: true
     },
-    synonyms: {
+    synonyms: [{
       type: String
-    },
+    }],
     audio: {
         type: String,
     },
