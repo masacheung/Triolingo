@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import demo from "../../styles/img/demo.png";
 
 const SplashPage = () => {
     return (
@@ -9,7 +10,7 @@ const SplashPage = () => {
                     Welcome to Triolingo!
                 </div>
 
-                <h1 className="sec-slogan">Splash Page!!!</h1>
+                <h1 className="sec-slogan">Triolingo is the best platform to help you study!!!<br/>Sign Up now and build your knowledge, <br/> prepare for your school!</h1>
                 <h1 className="third-slogan">Try Triolingo for Free</h1>
 
                 <Link to="/signup" className="slogan-sign-up-for-free">
@@ -22,7 +23,9 @@ const SplashPage = () => {
                 </Link>
                 </div>
             </div>
-
+            <div className="splash-image">
+                <img src={demo} alt="demo-image"/>
+            </div>
             <hr/>
             <div className="splash-footer">
                 <div className="splash-info">
