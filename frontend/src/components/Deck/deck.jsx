@@ -27,8 +27,8 @@ class Deck extends React.Component {
             <div>
                 <div className="deck-header">
                     {/* <h1>{props.deck.title}</h1> */}
-                    <Link to={`decks/${this.props.deck._id}`} className='deck-link'>
-                      {this.props.deck.title}
+                    <Link to={`decks/${this.props.deck._id}`} className="deck-link-link">
+                      <h1 className='deck-link'>{this.props.deck.title}</h1>
                     </Link>
                 </div>
                 

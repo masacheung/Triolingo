@@ -61,6 +61,10 @@
     padding: 10px 50px 10px 50px;
 }
 
+.message-input:focus {
+    border: 1px solid #4C82E6;
+}
+
 .message-submit-button {
     background-color: #4C82E6;
     color: white;
