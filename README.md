@@ -44,7 +44,7 @@ Users can view all the users's flash cards in the All Cards pages. Users can als
 ### Dictionary
 ![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/dictionary.gif)
 
-Users can search vocabulary with up to four different languages, English, Korean, Japanese and Spanish. Dictionary will generated definition, example, synonym and audio pronunciation. Users can also create the flash card to store the information for feature use.
+Users can search vocabulary with up to four different languages, English, Korean, Japanese and Spanish. Dictionary will generated definition, example, synonym and audio pronunciation. Users can also create the flash card to store the information for future use.
 
 ---
 
