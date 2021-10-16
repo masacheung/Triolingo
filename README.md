@@ -51,7 +51,7 @@ Users can search vocabulary with up to four different languages, English, Korean
 ### Discussion Board
 ![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/discussion.png)
 
-Having a discussion boards which create a more collaborative learning environment. Users can ask question and discussion the study process.
+Having a discussion boards which create a more collaborative learning environment. Users can ask questions and discuss the study process.
 
 ---
 
