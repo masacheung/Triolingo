@@ -53,14 +53,6 @@ Users can search vocabulary with up to four different languages, English, Korean
 
 Having a discussion boards which create a more collaborative learning environment. Users can ask questions and discuss the study process.
 
----
-
-### Edit Exist Card
-![alt text](https://github.com/masacheung/Triolingo/blob/main/frontend/src/styles/img/update_card.gif)
-
-Users can edit their own cards. In case they make misstake when they create the card.
-
-
 ## Project Team
 
 | |Role| Contacts|
