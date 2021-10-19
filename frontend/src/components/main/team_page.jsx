@@ -58,6 +58,9 @@ const TeamPage = () => {
                             <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
 
                         </a>
+                        <a href="https://angel.co/u/jong-woon-park" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faAngellist} className="fontAwesome"/>
+                        </a>
                     </div>
                 </div>
 
