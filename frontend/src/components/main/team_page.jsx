@@ -41,6 +41,9 @@ const TeamPage = () => {
                         <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">
                             <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
                         </a>
+                        <a href="https://angel.co/u/arwen-kim" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faAngellist} className="fontAwesome"/>
+                        </a>
                     </div>
                 </div>
 
