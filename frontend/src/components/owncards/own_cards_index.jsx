@@ -28,7 +28,6 @@ class OwnCardsIndex extends React.Component{
             })
         }
 
-        console.log(cards);
 
         return (
             <div className="cards-index-container">

@@ -42,7 +42,6 @@ router.post('/',
       category: req.body.category
     });
 
-    console.log(newCard.user);
     newCard.save().then(card => res.json(card));
   }
 );

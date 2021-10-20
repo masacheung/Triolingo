@@ -63,12 +63,10 @@ class Nav extends React.Component {
     }
 
     handleCreateDeck() {
-        console.log(this.state.decktitle);
         let deck = {
             title: this.state.decktitle,
             user: this.state.user
         }
-        console.log(deck);
 
         this.props.addDeck(deck);
         this.setState({decktitle: ""})
