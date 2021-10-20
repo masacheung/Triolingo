@@ -11,7 +11,7 @@ module.exports = function validateCardInput(data) {
     // data.audio = validText(data.audio) ? data.audio : '';
     // data.notes = validText(data.notes) ? data.notes : '';
 
-    if (!Validator.isLength(data.title, { min: 2, max: 140})) {
+    if (!Validator.isLength(data.title, { min: 1, max: 140})) {
         errors.title = 'Card title must be at least 2 characters long'
     }
 

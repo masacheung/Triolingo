@@ -48,7 +48,6 @@ router.post('/',
       title: req.body.title,
     });
 
-    console.log(newDeck.user);
     newDeck.save().then(deck => res.json(deck));
   }
 );

@@ -30,6 +30,24 @@ const TeamPage = () => {
                 </div>
 
                 <div className="member-card">
+                    <h2>Arwen Kim</h2>
+                    <div className="image-cropper">
+                        <img src={Arwen} alt="" className="profile-pic"/>
+                    </div>
+                    <div className="social-links">
+                        <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/>
+                        </a>
+                        <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
+                        </a>
+                        <a href="https://angel.co/u/arwen-kim" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faAngellist} className="fontAwesome"/>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="member-card">
                     <h2>Danny Park</h2>
                     <div className="image-cropper">
                         <img src={Danny} alt="" className="profile-pic"/>
@@ -43,20 +61,8 @@ const TeamPage = () => {
                             <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
 
                         </a>
-                    </div>
-                </div>
-
-                <div className="member-card">
-                    <h2>Arwen Kim</h2>
-                    <div className="image-cropper">
-                        <img src={Arwen} alt="" className="profile-pic"/>
-                    </div>
-                    <div className="social-links">
-                        <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/>
-                        </a>
-                        <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon icon={faGithub} className="fontAwesome"/>
+                        <a href="https://angel.co/u/jong-woon-park" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon icon={faAngellist} className="fontAwesome"/>
                         </a>
                     </div>
                 </div>

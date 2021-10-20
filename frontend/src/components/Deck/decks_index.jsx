@@ -18,8 +18,6 @@ class DecksIndex extends React.Component{
   }
 
   render() {
-
-    console.log(this.props.decks)
     
     let {fetchDecks, fetchDeck, addDeck, deleteDeck} = this.props;
     let decks = [];
