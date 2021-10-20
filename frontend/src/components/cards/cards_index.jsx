@@ -10,7 +10,7 @@ class CardsIndex extends React.Component{
         this.props.fetchCards();
         this.interval = setInterval(() => {
             this.refresh()
-        }, 1000)
+        }, 100000000)
     }
 
     refresh() {

@@ -6,8 +6,8 @@ const InstructionPage = () => {
         <div className="instruction-box">
             <h1>Instruction</h1>
             <ul className="instructions">
-                <li><p>▪️ Choose Alphabet to see the vocabularies starts with the alphabet</p></li>
                 <li><p>▪️ Each of vocabulary flash card has definition, example sentence, synonym/antonym and pronounciation!</p></li>
+                <li><p>▪️ You can choose words from languages of your choice!</p></li>
                 <li><p>▪️ You can create your own flash cards!</p></li>
                 <li><p>▪️ You can like the cards and make your favorite vocabulary cards deck!</p></li>
                 <li><p>▪️ You can share your flashcard decks with your friends! </p></li>
