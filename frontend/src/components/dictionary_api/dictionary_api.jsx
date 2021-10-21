@@ -10,17 +10,29 @@ const DictionaryApi = () => {
   const [meanings, setMeanings] = useState([]);
   const [category, setCategory] = useState("en");
 
- 
+  const config = {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Accept': 'application/json'
+    }
+  };
   const dictionaryApi = async () => {
     try {
-      const data = await axios({
-        url: `https://sheltered-savannah-55294.herokuapp.com/https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`,
-        method: 'GET'
-      })
-      setMeanings(data.data);
+      if(word.length > 0){
+
+        const data = await axios({
+          url: `https://sheltered-savannah-55294.herokuapp.com/https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`,
+          method: 'GET',
+          config
+        })
+        setMeanings(data.data);
+
+        }
       } 
     catch (error) {
-      console.log(error);
+      if(word !== ""){
+        console.log(error);
+      }
     }
   };
     
