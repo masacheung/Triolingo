@@ -29,6 +29,7 @@ const Definitions = ({ meanings, word, category }) => {
                   )}
                   {def.synonyms && (
                     <span>
+                      <br/>
                       {createSyn = def.synonyms.join(", ")}
                       <b>Synonyms :</b> {def.synonyms.map((s) => `${s}, `)}
                       <br />
