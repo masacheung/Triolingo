@@ -22,7 +22,7 @@ const Definitions = ({ meanings, word, category }) => {
                   {createSyn = def.synonyms}
                   <div className="definition">Definition: {def.definition}</div>
                   {def.example && (
-                    <span>
+                    <span className="definition">
                       <b>Example :</b> {def.example}
                       <br />
                     </span>
@@ -30,8 +30,7 @@ const Definitions = ({ meanings, word, category }) => {
                   {def.synonyms && (
                     <span>
                       <br/>
-                      {createSyn = def.synonyms.join(", ")}
-                      <b>Synonyms :</b> {def.synonyms.map((s) => `${s}, `)}
+                      <b>Synonyms :</b> {def.synonyms.join(", ")}
                       <br />
                     </span>
                   )}
