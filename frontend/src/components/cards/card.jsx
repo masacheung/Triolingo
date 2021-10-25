@@ -16,6 +16,13 @@ class Card extends React.Component{
         if(this.props.card.synonyms) {
             synonyms = this.props.card.synonyms.join(', ');
         }
+
+        let audio;
+        if(this.props.card.audio) {
+            audio = <audio src={this.props.card.audio} controls/>
+        }else {
+            audio = '';
+        }
         return(
             <div className="card">
                 <div>
@@ -30,7 +37,8 @@ class Card extends React.Component{
                             <h3>Synonyms: {this.props.card.synonyms.join(', ')}</h3>
                         </div>
                         <div className="audio">
-                            <audio src={this.props.card.audio} controls/>
+                            {/* <audio src={this.props.card.audio} controls/> */}
+                            {audio}
                         </div>
                         {/* <button onClick={() => this.handleDelete(this.props.card._id)}>HELO</button> */}
                     </div>
