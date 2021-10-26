@@ -20,7 +20,7 @@ class DeckShow extends React.Component{
 
     let curCard = [];
 
-    const cards = this.props.cards.data;
+    const cards = this.props.cards;
 
     cards.forEach(card => {
       curDeck.cards.forEach(deckCard => {

@@ -6,7 +6,7 @@ import { fetchCards, addCard } from "../../actions/card_actions";
 
 const mSTP = (state, ownProps) => ({
     decks: state.decks,
-    cards: state.cards,
+    cards: Object.values(state.cards),
     deckId: ownProps.match.params.deckId
 })
 
