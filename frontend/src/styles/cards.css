@@ -90,6 +90,10 @@
     margin-left: 10px;
 }
 
+.button {
+    justify-content: space-between;
+}
+
 .update-button {
     background-color: #4C82E6;
     color: #fff;
@@ -104,10 +108,32 @@
     transition: .3s background-color ease-in-out;
     position: absolute;
     bottom: 70px;
-    margin-left: -40px;
+    margin-left: -100px;
 }
 
 .update-button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.delete-button {
+    background-color: #ca2f2f;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    margin: 0px 5px 0px 5px;
+    height: 25px;
+    padding: 5px 10px 5px 12px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 50;
+    letter-spacing: 1.2px;
+    transition: .3s background-color ease-in-out;
+    position: absolute;
+    bottom: 70px;
+    margin-left: 40px;
+}
+
+.delete-button:hover {
     background-color: #fff;
     color: black;
 }

@@ -69,7 +69,7 @@ router.patch('/:id',
 
     // deleting a card
 router.delete('/:id', 
-  passport.authenticate('jwt', { session: true }),
+  // passport.authenticate('jwt', { session: true }),
   (req, res) => {
   Card.deleteOne({_id: req.params.id}).then(
     () => {

@@ -10,7 +10,7 @@ class CardsIndex extends React.Component{
         this.props.fetchCards();
         this.interval = setInterval(() => {
             this.refresh()
-        }, 100000000)
+        }, 1000)
     }
 
     refresh() {
@@ -18,10 +18,10 @@ class CardsIndex extends React.Component{
     }
 
     render() {
-        let cards = [];
-        if (this.props.cards.data) {
-            cards = Object.values(this.props.cards.data)
-        }
+        // let cards = [];
+        // if (this.props.cards.data) {
+        //     cards = Object.values(this.props.cards.data)
+        // }
 
         return (
             <div className="cards-index-container">
@@ -30,7 +30,7 @@ class CardsIndex extends React.Component{
                 </div>
 
                 <div className="card-list-container">
-                    <CardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} deleteCard={this.props.deleteCard}/>
+                    <CardsIndexList cards={this.props.cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} deleteCard={this.props.deleteCard}/>
                 </div>
             </div>
         )

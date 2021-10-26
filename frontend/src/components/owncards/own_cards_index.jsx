@@ -36,7 +36,7 @@ class OwnCardsIndex extends React.Component{
                 </div>
 
                 <div className="card-list-container">
-                    <OwnCardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} updateCard={this.props.updateCard}/>
+                    <OwnCardsIndexList cards={this.props.cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} updateCard={this.props.updateCard} deleteCard={this.props.deleteCard} />
                 </div>
             </div>
         )
