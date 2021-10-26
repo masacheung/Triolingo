@@ -12,7 +12,7 @@
     transform: translate(-50%, -50%);
     min-width: 465px;
     max-width: 465px;
-    height: auto;
+    height: 70%;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: rgba(0,0,0,0.05) 0px 0.1rem 0.3rem, rgba(0,0,0,0.05) 0px 0.1rem 0.2 rem, rgba(0,0,0,0.05) 0px 0.5 rem 1.5rem;
