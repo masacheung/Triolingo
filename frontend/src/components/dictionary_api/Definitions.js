@@ -16,7 +16,7 @@ const Definitions = ({ meanings, word, category }) => {
           ( i < 1 ? (
             mean.meanings.map((item, i) =>
               item.definitions.map((def, i) => (
-                (  i < 2 ? (<div className="singleMean">
+                (  i < 1 ? (<div className="singleMean">
                   {createWord = word}
                   {createdef = def.definition}
                   {createSyn = def.synonyms}
