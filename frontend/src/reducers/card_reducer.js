@@ -6,7 +6,12 @@ const cardReducer = (state = {}, action ) => {
 
   switch(action.type) {
     case RECEIVE_CARDS:
-      return action.cards;
+      // return action.cards;
+      let updatedState = {};
+      action.cards.data.forEach((card) => {
+        updatedState[card._id] = card;
+      });
+      return updatedState
     case RECEIVE_CARD:
       nextState[action.card.id] = action.card.data
       return nextState;
@@ -14,7 +19,8 @@ const cardReducer = (state = {}, action ) => {
     //   nextState[action.card._id] = action.card.data
     //   return nextState;
     case REMOVE_CARD:
-      delete nextState[action.card._id]
+
+      delete nextState[action.id]    
       return nextState;
     default:
       return state;

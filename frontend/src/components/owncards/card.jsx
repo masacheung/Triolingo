@@ -16,6 +16,7 @@ class Card extends React.Component{
         this.handleCloseModal = this.handleCloseModal.bind(this);
         this.handleOpenModal = this.handleOpenModal.bind(this);
         this.handleUpdate = this.handleUpdate.bind(this);
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     componentDidMount(){
@@ -24,6 +25,10 @@ class Card extends React.Component{
 
     update(field){
         return e => {this.setState({[field]: e.currentTarget.value})}
+    }
+
+    handleDelete(id) {
+        this.props.deleteCard(id);
     }
 
     handleOpenModal(card) {
@@ -65,8 +70,9 @@ class Card extends React.Component{
                         <div className="audio">
                             <audio src={this.props.card.audio} controls/>
                         </div>
-                        <div>
+                        <div className="button">
                             <button className="update-button" onClick={() => this.handleOpenModal(this.props.card)}>Update</button>
+                            <button className="delete-button" onClick={() => this.handleDelete(this.props.card._id)}>Delete</button>
                         </div>
                     </div>
                 </div>

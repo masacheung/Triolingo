@@ -5,7 +5,7 @@ import { fetchCards, fetchCard, addCard, deleteCard } from "../../actions/card_a
 
 const mSTP = state => ({
     currentUser: state.session.user.username,
-    cards: state.cards
+    cards: Object.values(state.cards)
 })
 
 const mDTP = dispatch => ({

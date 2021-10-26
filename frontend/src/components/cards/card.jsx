@@ -40,7 +40,7 @@ class Card extends React.Component{
                             {/* <audio src={this.props.card.audio} controls/> */}
                             {audio}
                         </div>
-                        {/* <button onClick={() => this.handleDelete(this.props.card._id)}>HELO</button> */}
+                        {/* <button onClick={() => this.handleDelete(this.props.card._id)}>Delete</button> */}
                     </div>
                 </div>
             </div>

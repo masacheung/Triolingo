@@ -9,7 +9,7 @@ const OwnCardsIndexList = props => {
 
         return (
             <div className="card-container">
-                <Card card={card} updateCard={props.updateCard} fetchCards={props.fetchCards}/>
+                <Card card={card} updateCard={props.updateCard} fetchCards={props.fetchCards} deleteCard={props.deleteCard}/>
             </div>        
         )
     });
