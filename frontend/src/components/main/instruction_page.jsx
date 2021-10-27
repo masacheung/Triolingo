@@ -3,7 +3,7 @@ import "../../styles/instruction.css"
 
 const InstructionPage = () => {
     return(
-        <div className="instruction-box">
+        <div className="dictionary-page">
             <h1>Instruction</h1>
             <ul className="instructions">
                 <li><p>▪️ Choose Alphabet to see the vocabularies starts with the alphabet</p></li>

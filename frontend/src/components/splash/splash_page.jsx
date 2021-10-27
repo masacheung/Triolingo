@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import demo from "../../styles/img/demo.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, faAngellist } from '@fortawesome/free-brands-svg-icons';
 
 const SplashPage = () => {
     return (
@@ -37,13 +39,13 @@ const SplashPage = () => {
                         Man Tat Masa Cheung
                         </li>
                         <li>
-                        <a href="https://github.com/masacheung" target="_blank" rel="noreferrer">Github</a>
+                        <a href="https://github.com/masacheung" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="fontAwesome"/> Github</a>
                         </li>
                         <li>
-                        <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/> LinkedIn</a>
                         </li>
                         <li>
-                        <a href="https://angel.co/u/man-tat-masa-cheung" target="_blank" rel="noreferrer">AngelList</a>
+                        <a href="https://angel.co/u/man-tat-masa-cheung" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faAngellist} className="fontAwesome"/> AngelList</a>
                         </li>
                     </ul>
                 </div>
@@ -57,13 +59,13 @@ const SplashPage = () => {
                         Arwen Kim
                         </li>
                         <li>
-                        <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">Github</a>
+                        <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="fontAwesome"/> Github</a>
                         </li>
                         <li>
-                        <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/> LinkedIn</a>
                         </li>
                         <li>
-                        <a href="https://angel.co/u/arwen-kim" target="_blank" rel="noreferrer">AngelList</a>
+                        <a href="https://angel.co/u/arwen-kim" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faAngellist} className="fontAwesome"/> AngelList</a>
                         </li>
                     </ul>
                 </div>
@@ -77,13 +79,13 @@ const SplashPage = () => {
                             Danny Park
                         </li>
                         <li>
-                        <a href="https://github.com/dannyjwpark" target="_blank" rel="noreferrer">Github</a>
+                        <a href="https://github.com/dannyjwpark" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} className="fontAwesome"/> Github</a>
                         </li>
                         <li>
-                        <a href="https://www.linkedin.com/in/jwp007/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/jwp007/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} className="fontAwesome"/> LinkedIn</a>
                         </li>
                         <li>
-                        <a href="https://angel.co/u/jong-woon-park" target="_blank" rel="noreferrer">AngelList</a>
+                        <a href="https://angel.co/u/jong-woon-park" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faAngellist} className="fontAwesome"/> AngelList</a>
                         </li>
                     </ul>
                 </div>
