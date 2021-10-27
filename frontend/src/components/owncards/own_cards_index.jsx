@@ -19,8 +19,8 @@ class OwnCardsIndex extends React.Component{
 
     render() {
         let cards = [];
-        if (this.props.cards.data) {
-            const allCards = Object.values(this.props.cards.data);
+        if (this.props.cards) {
+            const allCards = this.props.cards;
             allCards.forEach((card) => {
                 if(card.user === this.props.currentUser.id){
                     cards.push(card);
@@ -36,7 +36,7 @@ class OwnCardsIndex extends React.Component{
                 </div>
 
                 <div className="card-list-container">
-                    <OwnCardsIndexList cards={this.props.cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} updateCard={this.props.updateCard} deleteCard={this.props.deleteCard} />
+                    <OwnCardsIndexList cards={cards} currentUser={this.props.currentUser} fetchCards={this.props.fetchCards} updateCard={this.props.updateCard} deleteCard={this.props.deleteCard} />
                 </div>
             </div>
         )
