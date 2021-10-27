@@ -1,6 +1,6 @@
 .dictionary-page {
   display: grid;
-  height: 80vh;
+  height: 75vh;
   width: 80vw;
   grid-template-rows: 80px 1fr;
   text-decoration: none;
