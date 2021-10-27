@@ -29,7 +29,7 @@ const Navbar = ({loggedIn, logout, currentUser}) => {
                 </Link>
                 <ul className="ul-nav">
                     <li>
-                        <a href="https://github.com/masacheung/Triolingo">Github</a>
+                        <a href="https://github.com/masacheung/Triolingo" target="_blank" rel="noreferrer">Github</a>
                     </li>
                     <li>
                         <Link to="/team">Our Team</Link>

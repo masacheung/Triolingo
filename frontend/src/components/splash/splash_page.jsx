@@ -37,13 +37,13 @@ const SplashPage = () => {
                         Man Tat Masa Cheung
                         </li>
                         <li>
-                        <a href="https://github.com/masacheung">Github</a>
+                        <a href="https://github.com/masacheung" target="_blank" rel="noreferrer">Github</a>
                         </li>
                         <li>
-                        <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/man-tat-masa-cheung-725b39b8/" target="_blank" rel="noreferrer">LinkedIn</a>
                         </li>
                         <li>
-                        <a href="https://angel.co/u/man-tat-masa-cheung">AngelList</a>
+                        <a href="https://angel.co/u/man-tat-masa-cheung" target="_blank" rel="noreferrer">AngelList</a>
                         </li>
                     </ul>
                 </div>
@@ -57,9 +57,14 @@ const SplashPage = () => {
                         Arwen Kim
                         </li>
                         <li>
-                        <a href="https://github.com/arwensookim">Github</a>
+                        <a href="https://github.com/arwensookim" target="_blank" rel="noreferrer">Github</a>
                         </li>
-                        <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/">LinkedIn</a>
+                        <li>
+                        <a href="https://www.linkedin.com/in/arwen-kim-85a01b221/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        </li>
+                        <li>
+                        <a href="https://angel.co/u/arwen-kim" target="_blank" rel="noreferrer">AngelList</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -72,9 +77,14 @@ const SplashPage = () => {
                             Danny Park
                         </li>
                         <li>
-                        <a href="https://github.com/dannyjwpark">Github</a>
+                        <a href="https://github.com/dannyjwpark" target="_blank" rel="noreferrer">Github</a>
                         </li>
-                        <a href="https://www.linkedin.com/in/jwp007/">LinkedIn</a>
+                        <li>
+                        <a href="https://www.linkedin.com/in/jwp007/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        </li>
+                        <li>
+                        <a href="https://angel.co/u/jong-woon-park" target="_blank" rel="noreferrer">AngelList</a>
+                        </li>
                     </ul>
                 </div>
             </div>
