@@ -12,22 +12,21 @@ class MessagesList extends React.Component{
 
         let output = messages.slice(0, 14);
 
-
-
-
         return (
-            <ul className="message-list">
-                {output.reverse().map((message) => (
-                    <li className="message-item">
-                        <div className="message-item-user">
-                            {message.user}
-                        </div>
-                        <div className="message-item-message">
-                            {message.content}
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            // <div className="message-list-div">
+                <ul className="message-list">
+                    {output.reverse().map((message) => (
+                        <li className="message-item">
+                            <div className="message-item-user">
+                                {message.user}
+                            </div>
+                            <div className="message-item-message">
+                                {message.content}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            // </div>
         )
     }
 }
