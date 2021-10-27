@@ -41,6 +41,6 @@ class OwnCardsIndex extends React.Component{
             </div>
         )
     }
-};
+}
 
 export default OwnCardsIndex;

@@ -94,9 +94,9 @@ class Nav extends React.Component {
                 <button className="new-card" onClick={this.handleOpenModal}>
                     <FontAwesomeIcon icon={faPlus}/><div className="new-card-name">Add Card</div>
                 </button>
-                <button className="new-deck" onClick={this.handleOpenDeckModal}>
+                {/* <button className="new-deck" onClick={this.handleOpenDeckModal}>
                     <FontAwesomeIcon icon={faPlus}/><div className="new-card-name">Create Deck</div>
-                </button>
+                </button> */}
                 </div>
                 <ul className="main-nav-list">
                     <li>
@@ -115,10 +115,10 @@ class Nav extends React.Component {
                         <Link to="/owncards"><FontAwesomeIcon icon={faLayerGroup}/> Own Cards</Link>
                     </li>
                     <br className="main-nav-gap"/>
-                    <li>
+                    {/* <li>
                         <Link to="/decks"><FontAwesomeIcon icon={faInbox}/> All Categories</Link>
-                    </li>
-                    <br className="main-nav-gap"/>
+                    </li> */}
+                    {/* <br className="main-nav-gap"/> */}
                     <li>
                         <Link to="/messages"><FontAwesomeIcon icon={faComments}/> Discussion</Link>
                     </li>
