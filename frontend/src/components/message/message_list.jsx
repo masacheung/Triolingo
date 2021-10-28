@@ -15,8 +15,8 @@ class MessagesList extends React.Component{
         return (
             // <div className="message-list-div">
                 <ul className="message-list">
-                    {this.props.messages.map((message) => (
-                        <li className="message-item">
+                    {this.props.messages.map((message, i) => (
+                        <li className="message-item" key={i}>
                             <div className="message-item-user">
                                 {message.user}
                             </div>

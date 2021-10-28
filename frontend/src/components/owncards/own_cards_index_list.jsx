@@ -4,11 +4,11 @@ import Card from "./card";
 
 const OwnCardsIndexList = props => {
 
-    const cardList = props.cards.map((card) => {
+    const cardList = props.cards.map((card, i) => {
         if(!card) return null;
 
         return (
-            <div className="card-container">
+            <div className="card-container" key={i}>
                 <Card card={card} updateCard={props.updateCard} fetchCards={props.fetchCards} deleteCard={props.deleteCard}/>
             </div>        
         )
