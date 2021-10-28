@@ -44,6 +44,8 @@
     text-align: center;
     position: fixed;
     bottom: 0px;
+    display: flex;
+    background-color: #fff;
 }
 
 .message-input-container > form {
@@ -82,8 +84,9 @@
 .message-list {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    height: 84vh;
+    overflow-y: scroll;
+    height: calc(84vh - 7%);
+    margin-bottom: 100px;
 }
 
 .message-item {
@@ -113,7 +116,12 @@
     background-color: #fff;
 }
 
+.message-list > li:last-child {
+    margin-bottom: 60px;
+}
+
 .message-list-container {
+    display: block;
     margin-top: 50px;
     width: 100vw;
 }
