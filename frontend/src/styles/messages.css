@@ -82,6 +82,8 @@
 .message-list {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    height: 84vh;
 }
 
 .message-item {
@@ -114,5 +116,4 @@
 .message-list-container {
     margin-top: 50px;
     width: 100vw;
-    margin-bottom: 500px;
 }
