@@ -39,6 +39,19 @@ Triolingo's Dictionary is built with Dictionary API. Modifications to the Dictio
 
 Users can view all the users's flash cards in the All Cards pages. Users can also click the flash card audio player button to hear the pronunciation.
 
+Sort Card ascending order through the backend route.
+
+``` Javascript
+
+router.get('/', (req, res) => {
+    Card.find()
+        .sort({ title: 1 })
+        .then(cards => res.json(cards))
+        .catch(err => res.status(404).json({ nocardsfound: "No cards found"}));
+})
+
+```
+
 ---
 
 ### Dictionary
