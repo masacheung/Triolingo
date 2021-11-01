@@ -72,6 +72,23 @@ const dictionaryApi = async () => {
 
 ```
 
+Adding a create form in the dictionary page after user search the word can store as a flash card by one click.
+
+``` Javascript
+
+      <div className="api-create-form">
+        {word === "" ? "" : 
+        (<div>
+            <button className="api-create-button" onClick={() => addCard({category: careatecategory, 
+                                                                        title: createWord, definition: createdef, 
+                                                                        audio: createsrc, synonyms: createSyn})}>
+            <Link to="/owncards">Create Flash Card</Link></button>
+        </div>)
+        }
+      </div>
+
+```
+
 ---
 
 ### Discussion Board
