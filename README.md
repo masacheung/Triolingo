@@ -46,6 +46,32 @@ Users can view all the users's flash cards in the All Cards pages. Users can als
 
 Users can search vocabulary with up to four different languages, English, Korean, Japanese and Spanish. Dictionary will generated definition, example, synonym and audio pronunciation. Users can also create the flash card to store the information for future use.
 
+Triolingo retrieves word details by making axios fetch request to dictionary public API. It guarentees the ease and the accuracy of card creation with only the word from user input.
+
+``` Javascript
+
+const dictionaryApi = async () => {
+    try {
+      if(word.length > 0){
+
+        const data = await axios({
+          url: `https://sheltered-savannah-55294.herokuapp.com/https://api.dictionaryapi.dev/api/v2/entries/${category}/${word}`,
+          method: 'GET',
+          config
+        })
+        setMeanings(data.data);
+
+        }
+      } 
+    catch (error) {
+      if(word !== ""){
+        console.log(error);
+      }
+    }
+};
+
+```
+
 ---
 
 ### Discussion Board
