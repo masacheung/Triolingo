@@ -59,7 +59,7 @@ router.get('/', (req, res) => {
 
 Users can search vocabulary with up to four different languages, English, Korean, Japanese and Spanish. Dictionary will generated definition, example, synonym and audio pronunciation. Users can also create the flash card to store the information for future use.
 
-Triolingo retrieves word details by making axios fetch request to dictionary public API. It guarentees the ease and the accuracy of card creation with only the word from user input.
+Triolingo retrieves word details by making axios fetch requests to dictionary public API. It guarentees the ease and the accuracy of card creation with only the word from user input.
 
 ``` Javascript
 
